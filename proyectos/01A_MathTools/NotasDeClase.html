@@ -1,68 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>NotasDeClase</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
-<title>NotasDeClase slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/serif.css" id="theme">
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
-</script>
-
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    init_mathjax = function() {
-        if (window.MathJax) {
-        // MathJax loaded
-            MathJax.Hub.Config({
-                TeX: {
-                    equationNumbers: {
-                    autoNumber: "AMS",
-                    useLabelIds: true
-                    }
-                },
-                tex2jax: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                    processEscapes: true,
-                    processEnvironments: true
-                },
-                displayAlign: 'center',
-                CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
-                    }
-                },
-                "HTML-CSS": {
-                    linebreaks: { 
-                    automatic: true 
-                    }
-                }
-            });
-        
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-        }
-    }
-    init_mathjax();
-    </script>
-    <!-- End of mathjax configuration -->
 
 <style type="text/css">
     pre { line-height: 125%; margin: 0; }
@@ -14253,15 +14197,16 @@ a.anchor-link {
 .highlight  {
     margin: 0.4em;
 }
-.jp-Notebook {
-    padding: 0;
+
+/* Input area styling */
+.jp-InputArea {
+    overflow: hidden;
 }
-:root {
-    --jp-ui-font-size1: 20px;       /* instead of 14px */
-    --jp-content-font-size1: 20px;  /* instead of 14px */
-    --jp-code-font-size: 19px;      /* instead of 13px */
-    --jp-cell-prompt-width: 110px;  /* instead of 64px */
+
+.jp-InputArea-editor {
+    overflow: hidden;
 }
+
 @media print {
   body {
     margin: 0;
@@ -14269,120 +14214,49 @@ a.anchor-link {
 }
 </style>
 
-<style type="text/css">
-/* Overrides of notebook CSS for static HTML export */
-.reveal {
-  font-size: 160%;
-}
-.reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal pre code {
-  padding: 0px;
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
 
-div.jp-InputArea-editor {
-  padding: 0.06em;
-}
 
-div.code_cell {
-  background-color: transparent;
-}
-
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-
-div.jp-OutputPrompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-
-/* Reveal navigation controls */
-
-.reveal .controls .navigate-left,
-.reveal .controls .navigate-left.enabled {
-  border-right-color: #727272;
-}
-.reveal .controls .navigate-left.enabled:hover,
-.reveal .controls .navigate-left.enabled.enabled:hover {
-  border-right-color: #dfdfdf;
-}
-.reveal .controls .navigate-right,
-.reveal .controls .navigate-right.enabled {
-  border-left-color: #727272;
-}
-.reveal .controls .navigate-right.enabled:hover,
-.reveal .controls .navigate-right.enabled.enabled:hover {
-  border-left-color: #dfdfdf;
-}
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #727272;
-}
-.reveal .controls .navigate-up.enabled:hover,
-.reveal .controls .navigate-up.enabled.enabled:hover {
-  border-bottom-color: #dfdfdf;
-}
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #727272;
-}
-.reveal .controls .navigate-down.enabled:hover,
-.reveal .controls .navigate-down.enabled.enabled:hover {
-  border-top-color: #dfdfdf;
-}
-.reveal .progress span {
-  background: #727272;
-}
-
-/* Scrollbars */
-
-::-webkit-scrollbar
-{
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar *
-{
-  background:transparent;
-}
-::-webkit-scrollbar-thumb
-{
-  background: #727272 !important;
-}
-</style>
-
-</head>
-
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML-full,Safe"> </script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    init_mathjax = function() {
+        if (window.MathJax) {
+        // MathJax loaded
+            MathJax.Hub.Config({
+                TeX: {
+                    equationNumbers: {
+                    autoNumber: "AMS",
+                    useLabelIds: true
+                    }
+                },
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true,
+                    processEnvironments: true
+                },
+                displayAlign: 'center',
+                CommonHTML: {
+                    linebreaks: { 
+                    automatic: true 
+                    }
+                },
+                "HTML-CSS": {
+                    linebreaks: { 
+                    automatic: true 
+                    }
+                }
+            });
+        
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        }
+    }
+    init_mathjax();
+    </script>
+    <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
-<div class="reveal">
-<div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Objetivos">Objetivos<a class="anchor-link" href="#Objetivos">&#182;</a></h1><p>En esta sección estudiaremos los conceptos de</p>
@@ -14401,31 +14275,19 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nota, nota nota</p>
-<ul>
-<li>uno</li>
-<li>dos</li>
-</ul>
-
 </div>
-</div>
-</aside></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Al finalizar la sección los estudiantes deben comprender los conceptos básicos, deben ser capaces de verificar las características que definen un espacio vectorial, verificar la independencia lineal de un conjunto de vectores, expresar un vector como CL, de la base, hallar las componentes de un vector proyectando sobre los elementos de una base ortonormal.</p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Esta sección es sobre algunos conceptos matemáticos indispensables para la descripción de la Mecánica Cuántica.</p>
+<p>Esta sección es sobre algunos conceptos matemàticos indispensables para la descripción de la Mecánica Cuántica.</p>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Espacio-Vectorial-o-Espacio-Lineal">Espacio Vectorial o Espacio Lineal<a class="anchor-link" href="#Espacio-Vectorial-o-Espacio-Lineal">&#182;</a></h2><p>Es un conjunto de objetos ($\psi$, $\phi$, $\varphi$, etc) que llamaremos vectores, asociados a un campo numérico ($\mathbb{R}$ o $\mathbb{C}$) que llamaremos escalares.</p>
@@ -14440,7 +14302,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Propiedades-de-la-suma-de-vectores">Propiedades de la suma de vectores<a class="anchor-link" href="#Propiedades-de-la-suma-de-vectores">&#182;</a></h2><p>La suma es una típica operación abeliana (conmutativa)</p>
@@ -14459,7 +14321,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Propiedades-de-la-multiplicaci&#243;n-por-escalares">Propiedades de la multiplicaci&#243;n por escalares<a class="anchor-link" href="#Propiedades-de-la-multiplicaci&#243;n-por-escalares">&#182;</a></h2><ul>
@@ -14474,7 +14336,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Subespacio-vectorial">Subespacio vectorial<a class="anchor-link" href="#Subespacio-vectorial">&#182;</a></h2><p>Es un subconjunto de elementos de un espacio vectorial ($\psi$, $\phi$, $\varphi$, etc)</p>
@@ -14484,14 +14346,14 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Combinaci&#243;n-lineal">Combinaci&#243;n lineal<a class="anchor-link" href="#Combinaci&#243;n-lineal">&#182;</a></h2><p>Es una operación donde se conmbinan la suma de vectores y el producto por escalares</p>
 $$\psi=\sum_{i=1}^{n}a_i\phi_i$$<p>El vector $\psi$ es la combinación lineal <strong>(CL)</strong> de los $n$ vectores $\{\phi_1\dots\phi_n\}$ con <strong>coeficientes</strong> escalares $\{a_1 \dots a_n\}$</p>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Dependencia-lineal">Dependencia lineal<a class="anchor-link" href="#Dependencia-lineal">&#182;</a></h2><p>Un conjunto de vectores $\{\phi_n\}$ es linealmente independiente <strong>(LI)</strong> si cualquier <strong>CL</strong> de la siguiente forma:
@@ -14501,14 +14363,14 @@ $$a_1=0,\dots a_n=0$$.</p>
 <p>En caso contrario el conjunto es linealmente dependiente <strong>(LD)</strong></p>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Dependencia-lineal">Dependencia lineal<a class="anchor-link" href="#Dependencia-lineal">&#182;</a></h2><p>Cuando un conjunto es LD siempre se puede despejar uno de los vectores con coeficiente no-nulo en función de los demás. Si $a_k\neq 0$:
 $$\phi_k=-(\sum_{i=1}^{k-1}\frac{a_i}{a_k}\phi_i + \sum_{i=k+1}^{n}\frac{a_i}{a_k}\phi_i)$$</p>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Dimensi&#243;n-($dim[V]$)">Dimensi&#243;n ($dim[V]$)<a class="anchor-link" href="#Dimensi&#243;n-($dim[V]$)">&#182;</a></h2><ul>
@@ -14516,7 +14378,7 @@ $$\phi_k=-(\sum_{i=1}^{k-1}\frac{a_i}{a_k}\phi_i + \sum_{i=k+1}^{n}\frac{a_i}{a_
 <li>En caso que sea posible agregar vectores indefinidamente a un conjunto LI, el espacio tiene dimensión infinita.</li>
 </ul>
 <h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><ul>
-<li>Es cualquier conjunto de $dim[V]=N$ vectores LI.</li>
+<li>Es cualquier conjunto de $dim(V)=N$ vectores LI.</li>
 <li>Si se agrega un vector adicional $\psi$, el conjunto es LD
 $$-a_0\psi+\sum_{i=1}^{N}a_i\phi_i=O$$
 es posible para algún $a_0\neq 0$. Por lo tanto
@@ -14524,7 +14386,7 @@ $$\psi=\frac{1}{a_0}\sum_{i=1}^{N}a_i\phi_i$$</li>
 </ul>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><ul>
@@ -14535,7 +14397,7 @@ $$\psi=\frac{1}{a_0}\sum_{i=1}^{N}a_i\phi_i$$</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Suma-directa-de-subespacios">Suma directa de subespacios<a class="anchor-link" href="#Suma-directa-de-subespacios">&#182;</a></h2><p>Se dice que $V$ es la suma directa de dos subespacios $S$ y $T$ si cualquier vector de V se escribe como una única suma de un elemento de cada subespacio.</p>
@@ -14543,28 +14405,20 @@ $$\psi=\phi+\varphi,$$<p>donde $\psi\in V$, $\phi\in S$ y $\varphi\in T$</p>
 <p>Se escibe:</p>
 $$V=S\oplus T$$
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Las dimensiones se suman</p>
 $$dim[V]=dim[S]+dim[T]$$<p>Un ejemplo es el espacio vectorial $\mathbb{R}^3 = P \oplus L$, donde $P$ es el conjunto de puntos de un plano y $L$ es una recta que no está contenida en él.</p>
 
 </div>
-</div></div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Suma-directa-de-subespacios">Suma directa de subespacios<a class="anchor-link" href="#Suma-directa-de-subespacios">&#182;</a></h2><p>En MC encontraremos sistemas donde es conveniente representar el espacio de Hilbert de un sistema como la suma directa de subespacios con ciertas propiedades.</p>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En el contexto de la Mecánica Cuántica, la suma directa tiene relevancia en la descripción de la separación del espacio de estados en sectores que se diferencian y se separan por el valor de alguna magnitud física observable. Cuando estudiemos la suma de momento angular veremos un ejemplo de muchísimo interés.</p>
-
 </div>
-</div>
-</aside><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Spoiler-alert">Spoiler alert<a class="anchor-link" href="#Spoiler-alert">&#182;</a></h3><ul>
@@ -14573,13 +14427,13 @@ $$dim[V]=dim[S]+dim[T]$$<p>Un ejemplo es el espacio vectorial $\mathbb{R}^3 = P 
 </ul>
 
 </div>
-</div></div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Espacio-Dual">Espacio Dual<a class="anchor-link" href="#Espacio-Dual">&#182;</a></h2><p>Se denomina espacio dual $V^{*}$ a $V$, al conjunto de todas las funciones lineales que toman un vector y producen un escalar.</p>
 $$f(\sum_{i=1}^{n}a_i\psi_i)=\sum_{i=1}^{n}a_if(\psi_i)$$
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
@@ -14591,7 +14445,7 @@ $$f(\sum_{i=1}^{n}a_i\psi_i)=\sum_{i=1}^{n}a_if(\psi_i)$$
 </ul>
 
 </div>
-</div></div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Base-de-$V^{*}$">Base de $V^{*}$<a class="anchor-link" href="#Base-de-$V^{*}$">&#182;</a></h2><p>Tomemos una base $\{\phi_i; i=1\dots N\}$ y consideremos las siguientes $N$ funciones lineales:</p>
@@ -14600,7 +14454,7 @@ $$f_i(\phi_j)=\delta_{ij}$$<ul>
 </ul>
 
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
@@ -14611,23 +14465,13 @@ con algunos coeficientes $\alpha_i$ no nulos <strong>(Ejercicio)</strong>. Es de
 $$g()=\sum_{i=1}^{n}\alpha_if()$$<p>$g$ es CL de las funciones $\{f_i; i=1\dots N\}$</p>
 
 </div>
-</div></div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Producto-tensorial">Producto tensorial<a class="anchor-link" href="#Producto-tensorial">&#182;</a></h2><p>Si tenemos dos espacios vectoriales $V$ y $W$, sobre el mismo campo de escalares, podemos considerar el conjunto de todas las funciones bilineales $B(V,W)$ que toman vectores de ambos espacios y regresan escalares.</p>
 $$f(\psi,\phi) \longrightarrow \mathbb{C}$$
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Una forma muy intuitiva de entender el concepto de producto tensorial es a través del estudio de las funciones escalares lineales de dos argumentos vectoriales.</p>
-<p>En este caso consideramos una función que toma dos vectores y produce un número complejo.</p>
-<p>La función es lineal en los dos argumentos</p>
-
 </div>
-</div>
-</aside><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
@@ -14638,7 +14482,7 @@ $$f(a_1\psi_1+a_2\psi_2,\phi) = a_1f(\psi_1,\phi) + a_2f(\psi_2,\phi)$$<ul>
 </ul>
 $$f(\psi,b_1\phi_1+b_2\phi_2) = b_1f(\psi,\phi_1) + b_2f(\psi,\phi_2)$$
 </div>
-</div></div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Base-del-espacio-$B(V,W)$">Base del espacio $B(V,W)$<a class="anchor-link" href="#Base-del-espacio-$B(V,W)$">&#182;</a></h2><ul>
@@ -14651,20 +14495,7 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 </ul>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><p>Ventaja de usar el espacio de funciones: se ve fácilmente que la dimensión es el producto de las dimensiones de los espacios duales  de los espacios V y W</p>
-</li>
-<li><p>Solo hay que multiplicar funciones escalares lineales de cada espacio dual y obtenemos las funciones del espacio B</p>
-</li>
-</ul>
-
 </div>
-</div>
-</aside><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Definiciones">Definiciones<a class="anchor-link" href="#Definiciones">&#182;</a></h3><ul>
@@ -14673,19 +14504,7 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 </ul>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Decimos que B es el producto tensorial de los duales V<em> y W</em></li>
-<li>La definición que estamos buscando es la de producto tensorial de los espacios V y W</li>
-<li>La base del producto V x W es el producto de los vectores de las bases de V y W</li>
-</ul>
-
 </div>
-</div>
-</aside></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Producto-tensorial">Producto tensorial<a class="anchor-link" href="#Producto-tensorial">&#182;</a></h2><p>En MC el concepto de producto tensorial es utilizado para construir el espacio de Hilbert de un sistema compuesto de subsistemas más simples.</p>
@@ -14694,7 +14513,7 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 </ul>
 
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Spoiler-alert">Spoiler alert<a class="anchor-link" href="#Spoiler-alert">&#182;</a></h3><ul>
@@ -14703,16 +14522,16 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 </ul>
 
 </div>
-</div></div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Producto-escalar-y-Espacio-de-Hilbert">Producto escalar y Espacio de Hilbert<a class="anchor-link" href="#Producto-escalar-y-Espacio-de-Hilbert">&#182;</a></h2><p>Un espacio de Hilbert ($\mathcal{H}$) es un espacio vectorial que posee las siguientes características adicionales:</p>
 
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
+<ol>
 <li>Tiene un producto escalar <strong>(PE)</strong> estrictamente positivo<ul>
 <li>$(\phi,\psi) \longrightarrow \mathbb{C}$</li>
 <li>Estrictamente positivo:<ul>
@@ -14723,13 +14542,13 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 <li>Se define una función de distancia a partir del PE: $d(\phi,\psi) \equiv ||(\phi-\psi)||$</li>
 </ul>
 </li>
-</ul>
+</ol>
 
 </div>
-</div></div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
+<ol>
 <li>Es separable<ul>
 <li>Se puede conseguir una sucesión de Cauchy en $\mathcal{H}$ que tiene elementos arbitrariamente cerca de cualquier punto del espacio.<ul>
 <li>Para todo $\psi \in \mathcal{H}$ y $\epsilon&gt;0$ hay un $n$ tal que el elemento $\psi_n$ de la sucesión cumple $d(\psi_n,\psi)&lt;\epsilon$</li>
@@ -14737,21 +14556,21 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 </li>
 </ul>
 </li>
-</ul>
+</ol>
 
 </div>
-</div></div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
+<ol>
 <li>Es completo<ul>
 <li>Toda sucesión de Cauchy converge a un elemento del espacio $\mathcal{H}$</li>
 </ul>
 </li>
-</ul>
+</ol>
 
 </div>
-</div></div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Otras-propiedades-del-PE">Otras propiedades del PE<a class="anchor-link" href="#Otras-propiedades-del-PE">&#182;</a></h3><ul>
@@ -14772,22 +14591,22 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 </ul>
 
 </div>
-</div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Recordar: el producto escalar $(\phi,\psi)$ representa la proyección del vector $\phi$ sobre el vector $\psi$.</p>
-<p><img src="imagenes/Dot_Product.png" width="180"></p>
+<p><img src="imagenes/Dot_Product.svg" width="180"></p>
 <p>De No machine-readable author provided. &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Mazin07&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Mazin07 (page does not exist)&quot;&gt;Mazin07&lt;/a&gt; assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., Dominio público, <a href="https://commons.wikimedia.org/w/index.php?curid=3899178">Enlace</a></p>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Base-ortogonal">Base ortogonal<a class="anchor-link" href="#Base-ortogonal">&#182;</a></h2><p>Recordemos ortogonalidad
 $$(\phi,\psi)=0 \Leftrightarrow \phi\perp\psi$$</p>
 
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
@@ -14797,7 +14616,7 @@ $$\{\phi_i, i=1\dots dim[\mathcal{H}] / (\phi_i,\phi_j)=\delta_{ij} \}$$</li>
 </ul>
 
 </div>
-</div></div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="PE-y-espacio-dual">PE y espacio dual<a class="anchor-link" href="#PE-y-espacio-dual">&#182;</a></h2><p>El PE provee una conexión natural entre los elementos de $\mathcal{H}$ y su dual $\mathcal{H}^{*}$</p>
@@ -14808,7 +14627,7 @@ $$\{\phi_i, i=1\dots dim[\mathcal{H}] / (\phi_i,\phi_j)=\delta_{ij} \}$$</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Ejemplos-de-espacios-de-Hlibert">Ejemplos de espacios de Hlibert<a class="anchor-link" href="#Ejemplos-de-espacios-de-Hlibert">&#182;</a></h2><ul>
@@ -14821,7 +14640,7 @@ $$(\phi,\psi)=\int \phi^{*}(x) \psi(x) dx$$</li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Notaci&#243;n-de-Dirac">Notaci&#243;n de Dirac<a class="anchor-link" href="#Notaci&#243;n-de-Dirac">&#182;</a></h2><ul>
@@ -14830,7 +14649,7 @@ $$(\phi,\psi)=\int \phi^{*}(x) \psi(x) dx$$</li>
 </ul>
 
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Identificamos
@@ -14838,19 +14657,19 @@ $$f_{\psi} = (\psi,) \Longrightarrow &lt;\psi|$$</p>
 $$(\psi,\phi) \Longrightarrow &lt;\psi|\phi&gt; $$<p>es el <em>bra</em> <em>ket</em> = <em>braket</em></p>
 
 </div>
-</div></div></section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Propiedades">Propiedades<a class="anchor-link" href="#Propiedades">&#182;</a></h2>$$&lt;\psi|\phi&gt; = &lt;\phi|\psi&gt;^{*}$$$$a|\psi&gt; + b|\phi&gt; = a^{*}&lt;\psi| + b^{*}&lt;\phi|$$$$|a\psi&gt; = a|\psi&gt;$$$$&lt;a\psi| = a^{*}&lt;\psi|$$
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Interpretaci&#243;n-del-PE-en-MC">Interpretaci&#243;n del PE en MC<a class="anchor-link" href="#Interpretaci&#243;n-del-PE-en-MC">&#182;</a></h2><p>En MC el estado de una sistema es representado por un elemento de un $\mathcal{H}$. Si el estado actual del sistema es $|\psi&gt;$ y $|\phi&gt;$ es un vector unitario que representa un estado que caracteriza el sistema luego de una medición, la cantidad $|&lt;\phi|\psi&gt;|^{2}$ es la probabilidad de obtener dicho resultado después de la medición. Se define</p>
+<h2 id="Interpretaci&#243;n-del-PE-en-MQ">Interpretaci&#243;n del PE en MQ<a class="anchor-link" href="#Interpretaci&#243;n-del-PE-en-MQ">&#182;</a></h2><p>En MQ el estado de una sistema es representado por un elemento de un $\mathcal{H}$. Si el estado actual del sistema es $|\psi&gt;$ y $|\phi&gt;$ es un vector unitario que representa un estado que caracteriza el sistema luego de una medición, la cantidad $|&lt;\phi|\psi&gt;|^{2}$ es la probabilidad de obtener dicho resultado después de la medición. Se define</p>
 $$&lt;\phi|\psi&gt;$$<p>como la amplitud $|\psi&gt; \Longrightarrow|\phi&gt;$</p>
 
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="El-problema-de-los-espacios-de-dimensi&#243;n-infinita">El problema de los espacios de dimensi&#243;n infinita<a class="anchor-link" href="#El-problema-de-los-espacios-de-dimensi&#243;n-infinita">&#182;</a></h2><ul>
@@ -14860,13 +14679,13 @@ $$&lt;\phi|\psi&gt;$$<p>como la amplitud $|\psi&gt; \Longrightarrow|\phi&gt;$</p
 </ul>
 
 </div>
-</div><div class="fragment">
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><p>Se usa la expresión en serie de Fourier (base ortogonal)</p>
 $$f(x)=\sum_{i=1}^{\infty}f_i\sin (\frac{n\pi x}{L})$$
 </div>
-</div></div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Elemento-del-espacio-dual">Elemento del espacio dual<a class="anchor-link" href="#Elemento-del-espacio-dual">&#182;</a></h2><p>¿Podemos construir una función lineal de este espacio en los números reales, tal que, $F_{y}[f]=f(y)$?</p>
@@ -14878,7 +14697,7 @@ $$
 F_{y}[f] \equiv \int_{0}^{L}dx F_y(x)f(x) = f(y)
 $$
 </div>
-</div></section></section><section><section>
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Elementos-de-norma-infinita">Elementos de norma infinita<a class="anchor-link" href="#Elementos-de-norma-infinita">&#182;</a></h2><p>Consideramos</p>
@@ -14912,6 +14731,12 @@ $$&lt;F_y|F_y&gt; = \sum_{n=0}^{\infty} \sin^{2} (\frac{n\pi y}{L}) = \infty$$<p
 <p>Definimos la sumatoria de la función $F_{y}(x)$ hasta un orden dado y un intevalo $L$. Es la función $F_{yLn}(x)$:</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Consideramos los siguientes valores para el tamaño del intervalo $(L\sim L1)$ y punto de prueba $y\sim y1$. El rango de graficación estará definido en $x1$</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -14928,13 +14753,7 @@ $$&lt;F_y|F_y&gt; = \sum_{n=0}^{\infty} \sin^{2} (\frac{n\pi y}{L}) = \infty$$<p
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Consideramos los siguientes valores para el tamaño del intervalo $(L=L1=$ 1.0 $)$ y punto de prueba $y1=$ 0.4. El rango de graficación estará definido en $x1$</p>
-
 </div>
-</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Graficamos la función</p>
@@ -14983,61 +14802,27 @@ $$
 
 </div>
 
-</div></section></section>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
 </div>
+</div>
+</div>
+
 </div>
 </body>
 
 
-<script>
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "https://unpkg.com/reveal.js@4.0.2/dist/reveal.js"
-    ],
 
-    function(Reveal){
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-			slideNumber: "c/t",
-			showNotes: false,
-			defaultTiming: null,
-            history: true,
-            transition: "none",
-        });
 
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
 
-        Reveal.addEventListener('slidechanged', update);
 
-        function setScrollingSlide() {
-            var scroll = true
-            if (scroll === true) {
-              var h = $('.reveal').height() * 0.95;
-              $('section.present').find('section')
-                .filter(function() {
-                  return $(this).height() > h;
-                })
-                .css('height', 'calc(95vh)')
-                .css('overflow-y', 'scroll')
-                .css('margin-top', '20px');
-            }
-        }
-
-        // check and set the scrolling slide every time the slide change
-        Reveal.addEventListener('slidechanged', setScrollingSlide);
-    }
-);
-</script>
 
 </html>

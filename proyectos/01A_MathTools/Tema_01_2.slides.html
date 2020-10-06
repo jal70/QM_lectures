@@ -7,11 +7,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>NotasDeClase slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Tema_01_2 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/serif.css" id="theme">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -14385,602 +14385,65 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Herramientas-matem&#225;ticas">Herramientas matem&#225;ticas<a class="anchor-link" href="#Herramientas-matem&#225;ticas">&#182;</a></h1><h2 id="Operadores-1/2">Operadores 1/2<a class="anchor-link" href="#Operadores-1/2">&#182;</a></h2>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Objetivos">Objetivos<a class="anchor-link" href="#Objetivos">&#182;</a></h1><p>En esta sección estudiaremos los conceptos de</p>
-<ul>
-<li>Espacio vectorial</li>
-<li>Isomorfismo de espacios vectoriales</li>
-<li>Espacio dual</li>
-<li>Subespacio vectorial</li>
-<li>Suma directa de subespacios</li>
-<li>Combinación lineal, dependencia e independencia lineal</li>
-<li>Bases y dimensión</li>
-<li>Producto tensorial</li>
-<li>Espacio de Hilbert</li>
-<li>Producto escalar</li>
-<li>Notación de Dirac</li>
-</ul>
-
-</div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nota, nota nota</p>
-<ul>
-<li>uno</li>
-<li>dos</li>
-</ul>
-
-</div>
-</div>
-</aside></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Al finalizar la sección los estudiantes deben comprender los conceptos básicos, deben ser capaces de verificar las características que definen un espacio vectorial, verificar la independencia lineal de un conjunto de vectores, expresar un vector como CL, de la base, hallar las componentes de un vector proyectando sobre los elementos de una base ortonormal.</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Esta sección es sobre algunos conceptos matemáticos indispensables para la descripción de la Mecánica Cuántica.</p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Espacio-Vectorial-o-Espacio-Lineal">Espacio Vectorial o Espacio Lineal<a class="anchor-link" href="#Espacio-Vectorial-o-Espacio-Lineal">&#182;</a></h2><p>Es un conjunto de objetos ($\psi$, $\phi$, $\varphi$, etc) que llamaremos vectores, asociados a un campo numérico ($\mathbb{R}$ o $\mathbb{C}$) que llamaremos escalares.</p>
-<ul>
-<li>$\psi, \phi, \varphi \dots \in V$  </li>
-<li>$a, b, c \dots \in \mathbb{R},\mathbb{C}$</li>
-</ul>
-<p>Este conjunto tiene dos operaciones asociadas</p>
-<ul>
-<li>Suma de vectores</li>
-<li>Producto por escalares</li>
-</ul>
+<p>competencias ...</p>
 
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Propiedades-de-la-suma-de-vectores">Propiedades de la suma de vectores<a class="anchor-link" href="#Propiedades-de-la-suma-de-vectores">&#182;</a></h2><p>La suma es una típica operación abeliana (conmutativa)</p>
-<ul>
-<li>Clausura: $\phi+\varphi \in V$ <ul>
-<li>La suma nunca se escapa del espacio</li>
-</ul>
-</li>
-<li>Conmutatividad: $\phi+\varphi = \varphi+\phi$</li>
-<li>Asociatividad: $(\phi+\varphi)+\psi = \varphi+(\phi+\psi)= \varphi+\phi+\psi$<ul>
-<li>El orden es indiferente: no hay que declararlo</li>
-</ul>
-</li>
-<li>Existencia del elemento neutro para todos los elementos: $O+\phi=\phi+O=\phi$</li>
-<li>Existencia del vector simétrico, opuesto o inverso de cada elemento: $\phi+(-\phi)=O$</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Propiedades-de-la-multiplicaci&#243;n-por-escalares">Propiedades de la multiplicaci&#243;n por escalares<a class="anchor-link" href="#Propiedades-de-la-multiplicaci&#243;n-por-escalares">&#182;</a></h2><ul>
-<li>Clausura: $a\phi \in V$</li>
-<li>Distributibidad:<ul>
-<li>En suma de vectores $a(\phi+\varphi)=a\phi+a\varphi$</li>
-<li>En suma de escalares $(a+b)\phi=a\phi+b\phi$</li>
-</ul>
-</li>
-<li>Asociatividad: $(ab)\phi=a(b\phi)=ab\phi$</li>
-<li>Existencia del elemento neutro para todos los vectores: $1\phi = \phi$</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Subespacio-vectorial">Subespacio vectorial<a class="anchor-link" href="#Subespacio-vectorial">&#182;</a></h2><p>Es un subconjunto de elementos de un espacio vectorial ($\psi$, $\phi$, $\varphi$, etc)</p>
-<ul>
-<li>Satisface las propiedades de las operaciones por sí mismo.</li>
-<li>Atención a las propiedades de clausura y existencia de vector simétrico</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Combinaci&#243;n-lineal">Combinaci&#243;n lineal<a class="anchor-link" href="#Combinaci&#243;n-lineal">&#182;</a></h2><p>Es una operación donde se conmbinan la suma de vectores y el producto por escalares</p>
-$$\psi=\sum_{i=1}^{n}a_i\phi_i$$<p>El vector $\psi$ es la combinación lineal <strong>(CL)</strong> de los $n$ vectores $\{\phi_1\dots\phi_n\}$ con <strong>coeficientes</strong> escalares $\{a_1 \dots a_n\}$</p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Dependencia-lineal">Dependencia lineal<a class="anchor-link" href="#Dependencia-lineal">&#182;</a></h2><p>Un conjunto de vectores $\{\phi_n\}$ es linealmente independiente <strong>(LI)</strong> si cualquier <strong>CL</strong> de la siguiente forma:
-$$O=\sum_{i=1}^{n}a_i\phi_i,$$
-solo es posible cuando todos los coeficientes son nulos
-$$a_1=0,\dots a_n=0$$.</p>
-<p>En caso contrario el conjunto es linealmente dependiente <strong>(LD)</strong></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Dependencia-lineal">Dependencia lineal<a class="anchor-link" href="#Dependencia-lineal">&#182;</a></h2><p>Cuando un conjunto es LD siempre se puede despejar uno de los vectores con coeficiente no-nulo en función de los demás. Si $a_k\neq 0$:
-$$\phi_k=-(\sum_{i=1}^{k-1}\frac{a_i}{a_k}\phi_i + \sum_{i=k+1}^{n}\frac{a_i}{a_k}\phi_i)$$</p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Dimensi&#243;n-($dim[V]$)">Dimensi&#243;n ($dim[V]$)<a class="anchor-link" href="#Dimensi&#243;n-($dim[V]$)">&#182;</a></h2><ul>
-<li>Es el número máximo de vectores que pueden formar parte de un conjunto LI en un espacio vectorial.</li>
-<li>En caso que sea posible agregar vectores indefinidamente a un conjunto LI, el espacio tiene dimensión infinita.</li>
-</ul>
-<h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><ul>
-<li>Es cualquier conjunto de $dim[V]=N$ vectores LI.</li>
-<li>Si se agrega un vector adicional $\psi$, el conjunto es LD
-$$-a_0\psi+\sum_{i=1}^{N}a_i\phi_i=O$$
-es posible para algún $a_0\neq 0$. Por lo tanto
-$$\psi=\frac{1}{a_0}\sum_{i=1}^{N}a_i\phi_i$$</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><ul>
-<li><p>Es un conjunto de vectores que pueden expandir a todo el espacio.</p>
-</li>
-<li><p>Todo vector del espacio se puede escribir como CL de los vectores de la base.</p>
-</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Suma-directa-de-subespacios">Suma directa de subespacios<a class="anchor-link" href="#Suma-directa-de-subespacios">&#182;</a></h2><p>Se dice que $V$ es la suma directa de dos subespacios $S$ y $T$ si cualquier vector de V se escribe como una única suma de un elemento de cada subespacio.</p>
-$$\psi=\phi+\varphi,$$<p>donde $\psi\in V$, $\phi\in S$ y $\varphi\in T$</p>
-<p>Se escibe:</p>
-$$V=S\oplus T$$
 </div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Las dimensiones se suman</p>
-$$dim[V]=dim[S]+dim[T]$$<p>Un ejemplo es el espacio vectorial $\mathbb{R}^3 = P \oplus L$, donde $P$ es el conjunto de puntos de un plano y $L$ es una recta que no está contenida en él.</p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Suma-directa-de-subespacios">Suma directa de subespacios<a class="anchor-link" href="#Suma-directa-de-subespacios">&#182;</a></h2><p>En MC encontraremos sistemas donde es conveniente representar el espacio de Hilbert de un sistema como la suma directa de subespacios con ciertas propiedades.</p>
-
-</div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En el contexto de la Mecánica Cuántica, la suma directa tiene relevancia en la descripción de la separación del espacio de estados en sectores que se diferencian y se separan por el valor de alguna magnitud física observable. Cuando estudiemos la suma de momento angular veremos un ejemplo de muchísimo interés.</p>
-
-</div>
-</div>
-</aside><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Spoiler-alert">Spoiler alert<a class="anchor-link" href="#Spoiler-alert">&#182;</a></h3><ul>
-<li>¿Alguien ha dicho espacio de Hilbert?</li>
-<li>¿Qué es eso?</li>
+<h3 id="Referencia-principal">Referencia principal<a class="anchor-link" href="#Referencia-principal">&#182;</a></h3><ul>
+<li>ZETTILI, N. Quantum Mechanics Concepts and Applications: John Wiley &amp; Sons Ltd UK. 2009. <ul>
+<li>(Capítulo 2)</li>
+</ul>
+</li>
 </ul>
 
 </div>
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Espacio-Dual">Espacio Dual<a class="anchor-link" href="#Espacio-Dual">&#182;</a></h2><p>Se denomina espacio dual $V^{*}$ a $V$, al conjunto de todas las funciones lineales que toman un vector y producen un escalar.</p>
-$$f(\sum_{i=1}^{n}a_i\psi_i)=\sum_{i=1}^{n}a_if(\psi_i)$$
+<h2 id="Operador">Operador<a class="anchor-link" href="#Operador">&#182;</a></h2><p>En el contexto que nos atañe un operador es una regla que define una función lineal de un espacio vectorial en otro.</p>
+$$\hat{O}:V\longrightarrow V'$$
 </div>
 </div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>$V^{*}$ es un espacio vectorial <strong>(Ejercicio)</strong><ul>
-<li>La función lineal nula es cumple $f_O(\psi)=0$ para cualquier $\psi$</li>
-</ul>
-</li>
-<li>Si $dim[V]&lt;\infty$, entonces $dim[V]=dim[V^{*}]$</li>
-</ul>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Base-de-$V^{*}$">Base de $V^{*}$<a class="anchor-link" href="#Base-de-$V^{*}$">&#182;</a></h2><p>Tomemos una base $\{\phi_i; i=1\dots N\}$ y consideremos las siguientes $N$ funciones lineales:</p>
-$$f_i(\phi_j)=\delta_{ij}$$<ul>
-<li>Las funciones $\{f_i; i=1\dots N\}$ son LI <strong>(Ejercicio)</strong></li>
-</ul>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Cualquier función lineal $g$, no nula, cumple:
-$$g()-\sum_{i=1}^{n}\alpha_if() = f_O(),$$
-con algunos coeficientes $\alpha_i$ no nulos <strong>(Ejercicio)</strong>. Es decir,</li>
-</ul>
-$$g()=\sum_{i=1}^{n}\alpha_if()$$<p>$g$ es CL de las funciones $\{f_i; i=1\dots N\}$</p>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Producto-tensorial">Producto tensorial<a class="anchor-link" href="#Producto-tensorial">&#182;</a></h2><p>Si tenemos dos espacios vectoriales $V$ y $W$, sobre el mismo campo de escalares, podemos considerar el conjunto de todas las funciones bilineales $B(V,W)$ que toman vectores de ambos espacios y regresan escalares.</p>
-$$f(\psi,\phi) \longrightarrow \mathbb{C}$$
-</div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Una forma muy intuitiva de entender el concepto de producto tensorial es a través del estudio de las funciones escalares lineales de dos argumentos vectoriales.</p>
-<p>En este caso consideramos una función que toma dos vectores y produce un número complejo.</p>
-<p>La función es lineal en los dos argumentos</p>
-
-</div>
-</div>
-</aside><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Lineal en el primer argumento (vector de $V$)</li>
-</ul>
-$$f(a_1\psi_1+a_2\psi_2,\phi) = a_1f(\psi_1,\phi) + a_2f(\psi_2,\phi)$$<ul>
-<li>Lineal en el segundo argumento (vector de $W$)</li>
-</ul>
-$$f(\psi,b_1\phi_1+b_2\phi_2) = b_1f(\psi,\phi_1) + b_2f(\psi,\phi_2)$$
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Base-del-espacio-$B(V,W)$">Base del espacio $B(V,W)$<a class="anchor-link" href="#Base-del-espacio-$B(V,W)$">&#182;</a></h2><ul>
-<li>Se puede probar que $B(V,W)$ es un espacio vectorial, tiene dimensión $dim[V]dim[W]$ y construir una base</li>
-</ul>
-<p>Podemos construir una base para el espacio $B(V,W)$ a partir de las bases de los espacios duales $V^{*}$ ($f_i$) y $W^{*}$ ($g_i$). Al fin y al cabo se trata de funciones.</p>
-<p>Las funciones $F_{ij}\equiv f_ig_j$ cumplen con la bilinealidad. Además,</p>
-$$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
-<li>Las funciones $F_{ij}$ son una base de $B(V,W)$</li>
-</ul>
-
-</div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><p>Ventaja de usar el espacio de funciones: se ve fácilmente que la dimensión es el producto de las dimensiones de los espacios duales  de los espacios V y W</p>
-</li>
-<li><p>Solo hay que multiplicar funciones escalares lineales de cada espacio dual y obtenemos las funciones del espacio B</p>
-</li>
-</ul>
-
-</div>
-</div>
-</aside><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Definiciones">Definiciones<a class="anchor-link" href="#Definiciones">&#182;</a></h3><ul>
-<li>$B(V,W)\equiv V^{*}\otimes W^{*}$ es el prodcuto tensorial de los espacios $V^{*}$ y $W^{*}$</li>
-<li>$V\otimes W \equiv (V^{*}\otimes W^{*})^{*}$ es el prodcuto tensorial de los espacios $V$ y $W$</li>
-</ul>
-
-</div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Decimos que B es el producto tensorial de los duales V<em> y W</em></li>
-<li>La definición que estamos buscando es la de producto tensorial de los espacios V y W</li>
-<li>La base del producto V x W es el producto de los vectores de las bases de V y W</li>
-</ul>
-
-</div>
-</div>
-</aside></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Producto-tensorial">Producto tensorial<a class="anchor-link" href="#Producto-tensorial">&#182;</a></h2><p>En MC el concepto de producto tensorial es utilizado para construir el espacio de Hilbert de un sistema compuesto de subsistemas más simples.</p>
-<ul>
-<li>Ejemplo: Espacio de Hibert de un sistema de dos partículas libres es el producto tensorial de los espacios de Hilbert de cada partícula</li>
-</ul>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Spoiler-alert">Spoiler alert<a class="anchor-link" href="#Spoiler-alert">&#182;</a></h3><ul>
-<li>¿Alguien ha dicho espacio de Hilbert de nuevo?</li>
-<li>¿Qué es eso?</li>
-</ul>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Producto-escalar-y-Espacio-de-Hilbert">Producto escalar y Espacio de Hilbert<a class="anchor-link" href="#Producto-escalar-y-Espacio-de-Hilbert">&#182;</a></h2><p>Un espacio de Hilbert ($\mathcal{H}$) es un espacio vectorial que posee las siguientes características adicionales:</p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Tiene un producto escalar <strong>(PE)</strong> estrictamente positivo<ul>
-<li>$(\phi,\psi) \longrightarrow \mathbb{C}$</li>
-<li>Estrictamente positivo:<ul>
-<li>$(\psi,\psi) \equiv ||\psi||^{2}\geq 0$</li>
-<li>$||\psi||^{2} = 0 \Leftrightarrow \psi=O$</li>
-</ul>
-</li>
-<li>Se define una función de distancia a partir del PE: $d(\phi,\psi) \equiv ||(\phi-\psi)||$</li>
-</ul>
-</li>
-</ul>
+$$\hat{A}(a|\psi &gt; + b|\phi &gt;) = a\hat{A}|\psi &gt; + b\hat{A}|\phi &gt;$$<p></p>
 
 </div>
 </div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Es separable<ul>
-<li>Se puede conseguir una sucesión de Cauchy en $\mathcal{H}$ que tiene elementos arbitrariamente cerca de cualquier punto del espacio.<ul>
-<li>Para todo $\psi \in \mathcal{H}$ y $\epsilon&gt;0$ hay un $n$ tal que el elemento $\psi_n$ de la sucesión cumple $d(\psi_n,\psi)&lt;\epsilon$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Es completo<ul>
-<li>Toda sucesión de Cauchy converge a un elemento del espacio $\mathcal{H}$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Otras-propiedades-del-PE">Otras propiedades del PE<a class="anchor-link" href="#Otras-propiedades-del-PE">&#182;</a></h3><ul>
-<li>$(\phi,\psi) = (\psi,\phi)^{*}$</li>
-<li>Es lineal en el segundo argumento y antilineal en el primer argumento<ul>
-<li>$(a_1\psi_1+a_2\psi_2,\phi) = a_1^{*} (\psi_1,\phi) + a_2^{*} (\psi_2,\phi)$</li>
-<li>$(\psi,b_1\phi_1+b_2\phi_2) = b_1 (\psi,\phi_1) + b_2 (\psi,\phi_2)$</li>
-</ul>
-</li>
-<li>Cumple la desigualdad de Schwarz<ul>
-<li>$|(\phi,\psi)|^{2} \leq (\phi,\phi)(\psi,\psi)$</li>
-</ul>
-</li>
-<li>La distancia cumple la desigualdad triangular<ul>
-<li>$d(\phi,\psi) \leq d(\phi,\psi') + d(\psi',\psi)$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Recordar: el producto escalar $(\phi,\psi)$ representa la proyección del vector $\phi$ sobre el vector $\psi$.</p>
-<p><img src="imagenes/Dot_Product.png" width="180"></p>
-<p>De No machine-readable author provided. &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Mazin07&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Mazin07 (page does not exist)&quot;&gt;Mazin07&lt;/a&gt; assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., Dominio público, <a href="https://commons.wikimedia.org/w/index.php?curid=3899178">Enlace</a></p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Base-ortogonal">Base ortogonal<a class="anchor-link" href="#Base-ortogonal">&#182;</a></h2><p>Recordemos ortogonalidad
-$$(\phi,\psi)=0 \Leftrightarrow \phi\perp\psi$$</p>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Siempre es posible construir una base de vectores ortogonales para un espacio $\mathcal{H}$</li>
-<li>Si además se escogen vectores unitarios, la base es llamada ortonormal
-$$\{\phi_i, i=1\dots dim[\mathcal{H}] / (\phi_i,\phi_j)=\delta_{ij} \}$$</li>
-</ul>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="PE-y-espacio-dual">PE y espacio dual<a class="anchor-link" href="#PE-y-espacio-dual">&#182;</a></h2><p>El PE provee una conexión natural entre los elementos de $\mathcal{H}$ y su dual $\mathcal{H}^{*}$</p>
-<ul>
-<li>Consideramos $f_i \equiv (\psi_i,)$</li>
-<li>$f_i(\phi_j) = \delta_{ij}$ (es un elemento del espacio dual)</li>
-<li>En general $f_{\psi} \equiv (\psi,) \in \mathcal{H}^{*}$</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Ejemplos-de-espacios-de-Hlibert">Ejemplos de espacios de Hlibert<a class="anchor-link" href="#Ejemplos-de-espacios-de-Hlibert">&#182;</a></h2><ul>
-<li>$\mathbb{R}^{n}$ es el conjunto de las n-tuplas de números reales</li>
-<li>El conjunto de los desplazamientos en el sentido que se usa en la Mecánica Clásica
-$$(\phi,\psi)=\sum_{i=1}^N\phi_i\psi_i$$</li>
-<li>Espacio de las funciones $\psi(x):\mathbb{R} \rightarrow \mathbb{C}$ de cuadrado integrable
-$$\int ||\phi||^{2} dx \le \infty $$
-$$(\phi,\psi)=\int \phi^{*}(x) \psi(x) dx$$</li>
-</ul>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Notaci&#243;n-de-Dirac">Notaci&#243;n de Dirac<a class="anchor-link" href="#Notaci&#243;n-de-Dirac">&#182;</a></h2><ul>
-<li>Llamamos <em>ket</em>, $|\psi&gt;$, a los elementos de $\mathcal{H}$</li>
-<li>Llamamos <em>bra</em>, $&lt;\psi|$, a los elementos de $\mathcal{H}^{*}$</li>
-</ul>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Identificamos
-$$f_{\psi} = (\psi,) \Longrightarrow &lt;\psi|$$</p>
-$$(\psi,\phi) \Longrightarrow &lt;\psi|\phi&gt; $$<p>es el <em>bra</em> <em>ket</em> = <em>braket</em></p>
-
-</div>
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Propiedades">Propiedades<a class="anchor-link" href="#Propiedades">&#182;</a></h2>$$&lt;\psi|\phi&gt; = &lt;\phi|\psi&gt;^{*}$$$$a|\psi&gt; + b|\phi&gt; = a^{*}&lt;\psi| + b^{*}&lt;\phi|$$$$|a\psi&gt; = a|\psi&gt;$$$$&lt;a\psi| = a^{*}&lt;\psi|$$
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Interpretaci&#243;n-del-PE-en-MC">Interpretaci&#243;n del PE en MC<a class="anchor-link" href="#Interpretaci&#243;n-del-PE-en-MC">&#182;</a></h2><p>En MC el estado de una sistema es representado por un elemento de un $\mathcal{H}$. Si el estado actual del sistema es $|\psi&gt;$ y $|\phi&gt;$ es un vector unitario que representa un estado que caracteriza el sistema luego de una medición, la cantidad $|&lt;\phi|\psi&gt;|^{2}$ es la probabilidad de obtener dicho resultado después de la medición. Se define</p>
-$$&lt;\phi|\psi&gt;$$<p>como la amplitud $|\psi&gt; \Longrightarrow|\phi&gt;$</p>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="El-problema-de-los-espacios-de-dimensi&#243;n-infinita">El problema de los espacios de dimensi&#243;n infinita<a class="anchor-link" href="#El-problema-de-los-espacios-de-dimensi&#243;n-infinita">&#182;</a></h2><ul>
-<li>Consideramos el espacio de las funciones continuas, reales en el intervalo $(0,L)$ con $f(0)=f(L)=0$</li>
-<li>Es $L_2$</li>
-<li>Es un $\mathcal{H}$ con el producto usual</li>
-</ul>
-
-</div>
-</div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><p>Se usa la expresión en serie de Fourier (base ortogonal)</p>
-$$f(x)=\sum_{i=1}^{\infty}f_i\sin (\frac{n\pi x}{L})$$
+<h3 id="Hay-una-acci&#243;n-autom&#225;tica-sobre-el-espacio-dual">Hay una acci&#243;n autom&#225;tica sobre el espacio dual<a class="anchor-link" href="#Hay-una-acci&#243;n-autom&#225;tica-sobre-el-espacio-dual">&#182;</a></h3>$$(&lt;\psi|\hat{A})|\phi&gt; \equiv &lt;\psi|(\hat{A}|\phi&gt;)$$$$&lt;\psi|\hat{A} \in V'^{*}$$
 </div>
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Elemento-del-espacio-dual">Elemento del espacio dual<a class="anchor-link" href="#Elemento-del-espacio-dual">&#182;</a></h2><p>¿Podemos construir una función lineal de este espacio en los números reales, tal que, $F_{y}[f]=f(y)$?</p>
-<p>La solución parte por considerar la siguiente expansión:</p>
-$$
-F_y(x) = \sum_{n=1}^{\infty} \sin{(\frac{\pi ny}{L})} \sin{(\frac{\pi nx}{L})}
-$$<p>Por la unicidad de la serie de Fourier:</p>
-$$
-F_{y}[f] \equiv \int_{0}^{L}dx F_y(x)f(x) = f(y)
-$$
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Elementos-de-norma-infinita">Elementos de norma infinita<a class="anchor-link" href="#Elementos-de-norma-infinita">&#182;</a></h2><p>Consideramos</p>
-$$&lt;F_y|F_y&gt; = \sum_{n=0}^{\infty} \sin^{2} (\frac{n\pi y}{L}) = \infty$$<p>Revisar la definición de la Delta de Dirac $F_y(x)\sim \delta(x-y)$</p>
-
+<h2 id="Ejemplos-de-operadores">Ejemplos de operadores<a class="anchor-link" href="#Ejemplos-de-operadores">&#182;</a></h2><h3 id="Identidad">Identidad<a class="anchor-link" href="#Identidad">&#182;</a></h3>$$\hat{I}|\phi &gt; = |\phi &gt;$$<h3 id="Gradiente-(spoiler:-base-x)">Gradiente (spoiler: base x)<a class="anchor-link" href="#Gradiente-(spoiler:-base-x)">&#182;</a></h3>$$\vec{\nabla} \psi(\vec{r}) = \partial_x \psi \boldsymbol{\hat{e}_x} + \partial_y \psi \boldsymbol{\hat{e}_y} + \partial_z \psi \boldsymbol{\hat{e}_z}$$<h3 id="Posici&#243;n">Posici&#243;n<a class="anchor-link" href="#Posici&#243;n">&#182;</a></h3>$$\vec{R} \psi(\vec{r}) = ( x \boldsymbol{\hat{e}_x} + y \boldsymbol{\hat{e}_y} + z \boldsymbol{\hat{e}_z}) \psi(\vec{r})$$<h3 id="Momentum">Momentum<a class="anchor-link" href="#Momentum">&#182;</a></h3>$$\vec{P} \psi(\vec{r}) = -i\hbar \vec{\nabla} \psi$$<h3 id="Laplaciano">Laplaciano<a class="anchor-link" href="#Laplaciano">&#182;</a></h3>$$\nabla^2 \psi = (\partial_{x}^{2} + \partial_{y}^{2} + \partial_{z}^{2}) \psi$$<h3 id="Paridad">Paridad<a class="anchor-link" href="#Paridad">&#182;</a></h3>$$P \psi(\vec{r}) = \psi(-\vec{r})$$
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="k">def</span> <span class="nf">F_yLn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">output</span><span class="o">=</span><span class="mf">0.0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">output</span><span class="o">=</span><span class="n">output</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">y</span><span class="o">/</span><span class="n">L</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="n">L</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">output</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Definimos la sumatoria de la función $F_{y}(x)$ hasta un orden dado y un intevalo $L$. Es la función $F_{yLn}(x)$:</p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">L1</span><span class="o">=</span><span class="mf">1.0</span>
-<span class="n">y1</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">L1</span><span class="o">/</span><span class="mf">5.0</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.004</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Consideramos los siguientes valores para el tamaño del intervalo $(L=L1=$ 1.0 $)$ y punto de prueba $y1=$ 0.4. El rango de graficación estará definido en $x1$</p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Graficamos la función</p>
-$$
-F_{yLn}(x)|_{y=y1,L=L1,n=20}
-$$
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">F_yLn</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">L1</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y1</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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CACZOXPmNdeCX7p0SaZPny4AZM6cOYZd+y5SNVc/evRoASCzZs2qM1NQWloqS5YsEU9PT+nevbtV5/bqs2mQW/qhN8g3bdokAOT1119vsp3JZJKhQ4dKdHS0IWeYy8vLJSYmxqzpCpPJJL169ZL+/fvrrisiMnToUElISDC7/T333CMhISG67nAsLi4WpZTFd5dmZmbqmqLQG+Tz5s0THx8fi39hU1JSZMCAAVbXFakacUZHR5s9tfPGG28IAMNuedduxFqyZEmjbc6fPy+xsbHSo0cPQ2+suXTpkgwZMkQ8PT3ln//8Z53nysrKasJ29uzZhoapSNXv25///GcBIF26dJEXX3xRNmzYIC+88ILExMTUvFowuq5I1bz7vHnzxM3NTfz9/WXcuHFyxx13SFRUlACQW265xer7MeprVUFuMpnk+uuvl3bt2snFixcbbaeNOqy9ZLEhixYtMuuORe2PzZo1awypq92AceDAgWbbmkwm6dixo9x2222663br1k0mTJhg0Tbaaouff/65VTX1BvnSpUsFgNl374pU/Z+FhIRYfZVObbNnzxZfX99mz+OYTCazVsO0hMlkknHjxomXl5dkZGRc83xlZaXcdttt4ubmJt9+a/3/cWOKiopk6NChAkDGjh0rb775prz88suSkJDQ7PSHEXbs2CGDBg0S1FovZdCgQfLll1/arKYmIyND7r33XomPj5cuXbrIhAkTZPPmzYYeb6sKcpGqeScAjV7NUVZWJr169ZLOnTsber1nUVGRhISEyK233tpku5EjR0pUVJRVN8Q0JDc31+zRsXZi1ojppNtuu026d+9u0TbacgTW3pGqN8i1y8MsWRsjKytLYMHStU1JTU0VAE3Om9Zut3z5ct01a8vPz5fo6Gjp2LFjnfMblZWV8tBDDwlg/PrptZWXl8uzzz4rERERNWEaHx8v69evt1nN+o4dOya7d+82fD0YR2t1QS5SdQWLp6dng7djazfhWLNoU3Pmz58vABq9iUG75LCpl7fWGDJkiPTp06fZdgsWLBCllO4TKyJXT95Z8hJcGxGbe6defXqDXAtIS4JDu7XfkhtTGmMymSQ+Pr7ZE6533XWXBAQE6LqKoTFpaWkSFhYmbdq0kZdeeknee+89GTFihACQuXPn2nRUrCkrK5PDhw9bfJ03Na5VBnlBQYFERUVJt27d6pxI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
-"
->
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></section></section>
@@ -15005,11 +14468,8 @@ require(
         Reveal.initialize({
             controls: true,
             progress: true,
-			slideNumber: "c/t",
-			showNotes: false,
-			defaultTiming: null,
             history: true,
-            transition: "none",
+            transition: "slide",
         });
 
         var update = function(event){

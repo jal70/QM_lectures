@@ -7,11 +7,11 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>NotasDeClase slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Tema_01_1 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/serif.css" id="theme">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -14385,6 +14385,11 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Herramientas-matem&#225;ticas">Herramientas matem&#225;ticas<a class="anchor-link" href="#Herramientas-matem&#225;ticas">&#182;</a></h1><h2 id="Espacios-de-Hilbert">Espacios de Hilbert<a class="anchor-link" href="#Espacios-de-Hilbert">&#182;</a></h2>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Objetivos">Objetivos<a class="anchor-link" href="#Objetivos">&#182;</a></h1><p>En esta sección estudiaremos los conceptos de</p>
 <ul>
 <li>Espacio vectorial</li>
@@ -14401,19 +14406,7 @@ div.jp-OutputPrompt {
 </ul>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Nota, nota nota</p>
-<ul>
-<li>uno</li>
-<li>dos</li>
-</ul>
-
-</div>
-</div>
-</aside></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Al finalizar la sección los estudiantes deben comprender los conceptos básicos, deben ser capaces de verificar las características que definen un espacio vectorial, verificar la independencia lineal de un conjunto de vectores, expresar un vector como CL, de la base, hallar las componentes de un vector proyectando sobre los elementos de una base ortonormal.</p>
@@ -14423,14 +14416,17 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Esta sección es sobre algunos conceptos matemáticos indispensables para la descripción de la Mecánica Cuántica.</p>
+<h3 id="Referencia-principal">Referencia principal<a class="anchor-link" href="#Referencia-principal">&#182;</a></h3><ul>
+<li>ZETTILI, N. Quantum Mechanics Concepts and Applications: John Wiley &amp; Sons Ltd UK. 2009.</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Espacio-Vectorial-o-Espacio-Lineal">Espacio Vectorial o Espacio Lineal<a class="anchor-link" href="#Espacio-Vectorial-o-Espacio-Lineal">&#182;</a></h2><p>Es un conjunto de objetos ($\psi$, $\phi$, $\varphi$, etc) que llamaremos vectores, asociados a un campo numérico ($\mathbb{R}$ o $\mathbb{C}$) que llamaremos escalares.</p>
+<h2 id="Espacio-Vectorial-o-Espacio-Lineal">Espacio Vectorial o Espacio Lineal<a class="anchor-link" href="#Espacio-Vectorial-o-Espacio-Lineal">&#182;</a></h2><p>Es un conjunto de objetos ($\psi$, $\varphi$, etc) que llamaremos vectores, asociados a un campo numérico ($\mathbb{R}$ o $\mathbb{C}$) que llamaremos escalares.</p>
 <ul>
-<li>$\psi, \phi, \varphi \dots \in V$  </li>
+<li>$\psi, \varphi \dots \in V$  </li>
 <li>$a, b, c \dots \in \mathbb{R},\mathbb{C}$</li>
 </ul>
 <p>Este conjunto tiene dos operaciones asociadas</p>
@@ -14445,12 +14441,12 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Propiedades-de-la-suma-de-vectores">Propiedades de la suma de vectores<a class="anchor-link" href="#Propiedades-de-la-suma-de-vectores">&#182;</a></h2><p>La suma es una típica operación abeliana (conmutativa)</p>
 <ul>
-<li>Clausura: $\phi+\varphi \in V$ <ul>
+<li>Clausura: $\phi_1+\phi_2 \in V$ <ul>
 <li>La suma nunca se escapa del espacio</li>
 </ul>
 </li>
-<li>Conmutatividad: $\phi+\varphi = \varphi+\phi$</li>
-<li>Asociatividad: $(\phi+\varphi)+\psi = \varphi+(\phi+\psi)= \varphi+\phi+\psi$<ul>
+<li>Conmutatividad: $\phi_|+\phi_2 = \phi_2+\phi_1$</li>
+<li>Asociatividad: $(\phi_1+\phi_2)+\phi_3 = \phi_1+(\phi_2+\phi_3)= \phi_1+\phi_2+\phi_3$<ul>
 <li>El orden es indiferente: no hay que declararlo</li>
 </ul>
 </li>
@@ -14477,7 +14473,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Subespacio-vectorial">Subespacio vectorial<a class="anchor-link" href="#Subespacio-vectorial">&#182;</a></h2><p>Es un subconjunto de elementos de un espacio vectorial ($\psi$, $\phi$, $\varphi$, etc)</p>
+<h2 id="Subespacio-vectorial">Subespacio vectorial<a class="anchor-link" href="#Subespacio-vectorial">&#182;</a></h2><p>Es un subconjunto de elementos de un espacio vectorial ($\psi$, $\phi$, etc)</p>
 <ul>
 <li>Satisface las propiedades de las operaciones por sí mismo.</li>
 <li>Atención a las propiedades de clausura y existencia de vector simétrico</li>
@@ -14515,6 +14511,11 @@ $$\phi_k=-(\sum_{i=1}^{k-1}\frac{a_i}{a_k}\phi_i + \sum_{i=k+1}^{n}\frac{a_i}{a_
 <li>Es el número máximo de vectores que pueden formar parte de un conjunto LI en un espacio vectorial.</li>
 <li>En caso que sea posible agregar vectores indefinidamente a un conjunto LI, el espacio tiene dimensión infinita.</li>
 </ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><ul>
 <li>Es cualquier conjunto de $dim[V]=N$ vectores LI.</li>
 <li>Si se agrega un vector adicional $\psi$, el conjunto es LD
@@ -14524,22 +14525,22 @@ $$\psi=\frac{1}{a_0}\sum_{i=1}^{N}a_i\phi_i$$</li>
 </ul>
 
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Base">Base<a class="anchor-link" href="#Base">&#182;</a></h2><ul>
-<li><p>Es un conjunto de vectores que pueden expandir a todo el espacio.</p>
+<ul>
+<li><p>Es un conjunto de vectores que puede expandir a todo el espacio.</p>
 </li>
 <li><p>Todo vector del espacio se puede escribir como CL de los vectores de la base.</p>
 </li>
 </ul>
 
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Suma-directa-de-subespacios">Suma directa de subespacios<a class="anchor-link" href="#Suma-directa-de-subespacios">&#182;</a></h2><p>Se dice que $V$ es la suma directa de dos subespacios $S$ y $T$ si cualquier vector de V se escribe como una única suma de un elemento de cada subespacio.</p>
-$$\psi=\phi+\varphi,$$<p>donde $\psi\in V$, $\phi\in S$ y $\varphi\in T$</p>
+$$\psi=\phi_S+\phi_T,$$<p>donde $\psi\in V$, $\phi_S\in S$ y $\phi_T\in T$</p>
 <p>Se escibe:</p>
 $$V=S\oplus T$$
 </div>
@@ -14547,8 +14548,8 @@ $$V=S\oplus T$$
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Las dimensiones se suman</p>
-$$dim[V]=dim[S]+dim[T]$$<p>Un ejemplo es el espacio vectorial $\mathbb{R}^3 = P \oplus L$, donde $P$ es el conjunto de puntos de un plano y $L$ es una recta que no está contenida en él.</p>
-
+$$dim[V]=dim[S]+dim[T]$$<p>Un ejemplo muy conocido (invitando al producto escalar a la conversación) se consigue al considerar la descomposición de vectores de $\mathbb{R}^3$ en la suma de sus partes paralela y perpendicular a un elemento particular $\psi$</p>
+$$\phi=\phi_{\parallel\psi} + \phi_{\perp\psi}$$
 </div>
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14556,15 +14557,7 @@ $$dim[V]=dim[S]+dim[T]$$<p>Un ejemplo es el espacio vectorial $\mathbb{R}^3 = P 
 <h2 id="Suma-directa-de-subespacios">Suma directa de subespacios<a class="anchor-link" href="#Suma-directa-de-subespacios">&#182;</a></h2><p>En MC encontraremos sistemas donde es conveniente representar el espacio de Hilbert de un sistema como la suma directa de subespacios con ciertas propiedades.</p>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>En el contexto de la Mecánica Cuántica, la suma directa tiene relevancia en la descripción de la separación del espacio de estados en sectores que se diferencian y se separan por el valor de alguna magnitud física observable. Cuando estudiemos la suma de momento angular veremos un ejemplo de muchísimo interés.</p>
-
-</div>
-</div>
-</aside><div class="fragment">
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Spoiler-alert">Spoiler alert<a class="anchor-link" href="#Spoiler-alert">&#182;</a></h3><ul>
@@ -14605,29 +14598,19 @@ $$f_i(\phi_j)=\delta_{ij}$$<ul>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
 <li>Cualquier función lineal $g$, no nula, cumple:
-$$g()-\sum_{i=1}^{n}\alpha_if() = f_O(),$$
+$$g()-\sum_{i=1}^{n}\alpha_if_i() = f_O(),$$
 con algunos coeficientes $\alpha_i$ no nulos <strong>(Ejercicio)</strong>. Es decir,</li>
 </ul>
-$$g()=\sum_{i=1}^{n}\alpha_if()$$<p>$g$ es CL de las funciones $\{f_i; i=1\dots N\}$</p>
+$$g()=\sum_{i=1}^{n}\alpha_if_i()$$<p>$g$ es CL de las funciones $\{f_i; i=1\dots N\}$</p>
 
 </div>
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Producto-tensorial">Producto tensorial<a class="anchor-link" href="#Producto-tensorial">&#182;</a></h2><p>Si tenemos dos espacios vectoriales $V$ y $W$, sobre el mismo campo de escalares, podemos considerar el conjunto de todas las funciones bilineales $B(V,W)$ que toman vectores de ambos espacios y regresan escalares.</p>
+<h2 id="Producto-tensorial-1">Producto tensorial <a href="#fn"><sup>1</sup></a><a class="anchor-link" href="#Producto-tensorial-1">&#182;</a></h2><p>Si tenemos dos espacios vectoriales $V$ y $W$, sobre el mismo campo de escalares, podemos considerar el conjunto de todas las funciones bilineales $B(V,W)$ que toman vectores de ambos espacios y regresan escalares.</p>
 $$f(\psi,\phi) \longrightarrow \mathbb{C}$$
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Una forma muy intuitiva de entender el concepto de producto tensorial es a través del estudio de las funciones escalares lineales de dos argumentos vectoriales.</p>
-<p>En este caso consideramos una función que toma dos vectores y produce un número complejo.</p>
-<p>La función es lineal en los dos argumentos</p>
-
-</div>
-</div>
-</aside><div class="fragment">
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
@@ -14636,7 +14619,8 @@ $$f(\psi,\phi) \longrightarrow \mathbb{C}$$
 $$f(a_1\psi_1+a_2\psi_2,\phi) = a_1f(\psi_1,\phi) + a_2f(\psi_2,\phi)$$<ul>
 <li>Lineal en el segundo argumento (vector de $W$)</li>
 </ul>
-$$f(\psi,b_1\phi_1+b_2\phi_2) = b_1f(\psi,\phi_1) + b_2f(\psi,\phi_2)$$
+$$f(\psi,b_1\phi_1+b_2\phi_2) = b_1f(\psi,\phi_1) + b_2f(\psi,\phi_2)$$<p><a href="#fn"><sup>1</sup></a> <span id="fn"> Ver: BIRKHOFF, Garrett; MACLANE, Saunders. A survey of modern algebra, AK Peters. 1998. </span></p>
+
 </div>
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -14651,41 +14635,16 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 </ul>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li><p>Ventaja de usar el espacio de funciones: se ve fácilmente que la dimensión es el producto de las dimensiones de los espacios duales  de los espacios V y W</p>
-</li>
-<li><p>Solo hay que multiplicar funciones escalares lineales de cada espacio dual y obtenemos las funciones del espacio B</p>
-</li>
-</ul>
-
-</div>
-</div>
-</aside><div class="fragment">
+</div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Definiciones">Definiciones<a class="anchor-link" href="#Definiciones">&#182;</a></h3><ul>
-<li>$B(V,W)\equiv V^{*}\otimes W^{*}$ es el prodcuto tensorial de los espacios $V^{*}$ y $W^{*}$</li>
-<li>$V\otimes W \equiv (V^{*}\otimes W^{*})^{*}$ es el prodcuto tensorial de los espacios $V$ y $W$</li>
+<li>$B(V,W)\equiv V^{*}\otimes W^{*}$ es el producto tensorial de los espacios $V^{*}$ y $W^{*}$</li>
+<li>$V\otimes W \equiv (V^{*}\otimes W^{*})^{*}$ es el producto tensorial de los espacios $V$ y $W$</li>
 </ul>
 
 </div>
-</div><aside class="notes">
-
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Decimos que B es el producto tensorial de los duales V<em> y W</em></li>
-<li>La definición que estamos buscando es la de producto tensorial de los espacios V y W</li>
-<li>La base del producto V x W es el producto de los vectores de las bases de V y W</li>
-</ul>
-
-</div>
-</div>
-</aside></div></section><section>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Producto-tensorial">Producto tensorial<a class="anchor-link" href="#Producto-tensorial">&#182;</a></h2><p>En MC el concepto de producto tensorial es utilizado para construir el espacio de Hilbert de un sistema compuesto de subsistemas más simples.</p>
@@ -14776,8 +14735,17 @@ $$F_{ij}(\phi_k^{V},\phi_l^{W})=\delta_{ik}\delta_{jl}$$<ul>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Recordar: el producto escalar $(\phi,\psi)$ representa la proyección del vector $\phi$ sobre el vector $\psi$.</p>
-<p><img src="imagenes/Dot_Product.png" width="180"></p>
-<p>De No machine-readable author provided. &lt;a href=&quot;//commons.wikimedia.org/w/index.php?title=User:Mazin07&amp;amp;action=edit&amp;amp;redlink=1&quot; class=&quot;new&quot; title=&quot;User:Mazin07 (page does not exist)&quot;&gt;Mazin07&lt;/a&gt; assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., Dominio público, <a href="https://commons.wikimedia.org/w/index.php?curid=3899178">Enlace</a></p>
+<table>
+<thead><tr>
+<th style="text-align:center"><img src="imagenes/Dot_Product.png" alt="Titulo"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Producto Escalar. <a href="https://commons.wikimedia.org/w/index.php?curid=3899178">Imagen de dominio público</a></em></td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div></section></section><section><section>
@@ -14802,7 +14770,7 @@ $$\{\phi_i, i=1\dots dim[\mathcal{H}] / (\phi_i,\phi_j)=\delta_{ij} \}$$</li>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="PE-y-espacio-dual">PE y espacio dual<a class="anchor-link" href="#PE-y-espacio-dual">&#182;</a></h2><p>El PE provee una conexión natural entre los elementos de $\mathcal{H}$ y su dual $\mathcal{H}^{*}$</p>
 <ul>
-<li>Consideramos $f_i \equiv (\psi_i,)$</li>
+<li>Consideramos $f_i \equiv (\phi_i,)$</li>
 <li>$f_i(\phi_j) = \delta_{ij}$ (es un elemento del espacio dual)</li>
 <li>En general $f_{\psi} \equiv (\psi,) \in \mathcal{H}^{*}$</li>
 </ul>
@@ -14811,10 +14779,10 @@ $$\{\phi_i, i=1\dots dim[\mathcal{H}] / (\phi_i,\phi_j)=\delta_{ij} \}$$</li>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Ejemplos-de-espacios-de-Hlibert">Ejemplos de espacios de Hlibert<a class="anchor-link" href="#Ejemplos-de-espacios-de-Hlibert">&#182;</a></h2><ul>
+<h2 id="Ejemplos-de-espacios-de-Hilbert">Ejemplos de espacios de Hilbert<a class="anchor-link" href="#Ejemplos-de-espacios-de-Hilbert">&#182;</a></h2><ul>
 <li>$\mathbb{R}^{n}$ es el conjunto de las n-tuplas de números reales</li>
 <li>El conjunto de los desplazamientos en el sentido que se usa en la Mecánica Clásica
-$$(\phi,\psi)=\sum_{i=1}^N\phi_i\psi_i$$</li>
+$$(\phi,\psi)=\sum_{i=1}^N\phi_{i}^{*}\psi_i$$</li>
 <li>Espacio de las funciones $\psi(x):\mathbb{R} \rightarrow \mathbb{C}$ de cuadrado integrable
 $$\int ||\phi||^{2} dx \le \infty $$
 $$(\phi,\psi)=\int \phi^{*}(x) \psi(x) dx$$</li>
@@ -14841,13 +14809,13 @@ $$(\psi,\phi) \Longrightarrow &lt;\psi|\phi&gt; $$<p>es el <em>bra</em> <em>ket<
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Propiedades">Propiedades<a class="anchor-link" href="#Propiedades">&#182;</a></h2>$$&lt;\psi|\phi&gt; = &lt;\phi|\psi&gt;^{*}$$$$a|\psi&gt; + b|\phi&gt; = a^{*}&lt;\psi| + b^{*}&lt;\phi|$$$$|a\psi&gt; = a|\psi&gt;$$$$&lt;a\psi| = a^{*}&lt;\psi|$$
+<h2 id="Propiedades">Propiedades<a class="anchor-link" href="#Propiedades">&#182;</a></h2>$$&lt;\psi|\phi&gt; = &lt;\phi|\psi&gt;^{*}$$$$a|\psi&gt; + b|\phi&gt; \longrightarrow a^{*}&lt;\psi| + b^{*}&lt;\phi|$$$$|a\psi&gt; = a|\psi&gt;$$$$&lt;a\psi| = a^{*}&lt;\psi|$$
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Interpretaci&#243;n-del-PE-en-MC">Interpretaci&#243;n del PE en MC<a class="anchor-link" href="#Interpretaci&#243;n-del-PE-en-MC">&#182;</a></h2><p>En MC el estado de una sistema es representado por un elemento de un $\mathcal{H}$. Si el estado actual del sistema es $|\psi&gt;$ y $|\phi&gt;$ es un vector unitario que representa un estado que caracteriza el sistema luego de una medición, la cantidad $|&lt;\phi|\psi&gt;|^{2}$ es la probabilidad de obtener dicho resultado después de la medición. Se define</p>
-$$&lt;\phi|\psi&gt;$$<p>como la amplitud $|\psi&gt; \Longrightarrow|\phi&gt;$</p>
+<h2 id="Interpretaci&#243;n-del-PE-en-MC">Interpretaci&#243;n del PE en MC<a class="anchor-link" href="#Interpretaci&#243;n-del-PE-en-MC">&#182;</a></h2><p>En MC el estado de una sistema es representado por un elemento de un $\mathcal{H}$. Si el estado actual del sistema es $|\psi&gt;$ y $|\phi&gt;$ es un vector unitario que representa un estado que caracteriza el sistema luego de una medición, la cantidad $|&lt;\phi|\psi&gt;|^{2}$ es la probabilidad de obtener dicho resultado después de la medición. Se define la cantidad</p>
+$$&lt;\phi|\psi&gt;,$$<p>como la amplitud de transición $|\psi&gt; \Longrightarrow|\phi&gt;$.</p>
 
 </div>
 </div></section></section><section><section>
@@ -14855,7 +14823,7 @@ $$&lt;\phi|\psi&gt;$$<p>como la amplitud $|\psi&gt; \Longrightarrow|\phi&gt;$</p
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="El-problema-de-los-espacios-de-dimensi&#243;n-infinita">El problema de los espacios de dimensi&#243;n infinita<a class="anchor-link" href="#El-problema-de-los-espacios-de-dimensi&#243;n-infinita">&#182;</a></h2><ul>
 <li>Consideramos el espacio de las funciones continuas, reales en el intervalo $(0,L)$ con $f(0)=f(L)=0$</li>
-<li>Es $L_2$</li>
+<li>Es un subconjunto de las funciones de cuadrado integrable</li>
 <li>Es un $\mathcal{H}$ con el producto usual</li>
 </ul>
 
@@ -15009,7 +14977,7 @@ require(
 			showNotes: false,
 			defaultTiming: null,
             history: true,
-            transition: "none",
+            transition: "slide",
         });
 
         var update = function(event){
