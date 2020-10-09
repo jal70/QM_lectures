@@ -11,7 +11,7 @@
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/reveal.css">
-<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/simple.css" id="theme">
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.0.2/dist/theme/serif.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -14391,12 +14391,23 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Objetivos">Objetivos<a class="anchor-link" href="#Objetivos">&#182;</a></h1><p>En esta sección estudiaremos los conceptos de</p>
+<ul>
+<li>Operador lineal en un espacio de Hilbert</li>
+<li>Operaciones de suma y producto de operadores</li>
+<li>Valor esperado</li>
+<li>Expresión de operadores en componentes</li>
+<li>Operador adjunto</li>
+<li>Operadores hermíticos y anti-hermíticos</li>
+<li>Propiedades de los conmutadores y anti-conmutadores de operadores</li>
+<li>Relación de incertidumbre</li>
+<li>Operadores de proyección</li>
+</ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>competencias ...</p>
+<p>Se espera que los estudiantes muestren un conocimiento operacional básico de los conceptos que se presentarán en la sección.</p>
 
 </div>
 </div><div class="fragment">
@@ -14425,27 +14436,243 @@ $$\hat{A}(a|\psi &gt; + b|\phi &gt;) = a\hat{A}|\psi &gt; + b\hat{A}|\phi &gt;$$
 </div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Hay-una-acci&#243;n-autom&#225;tica-sobre-el-espacio-dual">Hay una acci&#243;n autom&#225;tica sobre el espacio dual<a class="anchor-link" href="#Hay-una-acci&#243;n-autom&#225;tica-sobre-el-espacio-dual">&#182;</a></h3>$$(&lt;\psi|\hat{A})|\phi&gt; \equiv &lt;\psi|(\hat{A}|\phi&gt;)$$$$&lt;\psi|\hat{A} \in V'^{*}$$
+<h3 id="Hay-una-acci&#243;n-autom&#225;tica-sobre-el-espacio-dual">Hay una acci&#243;n autom&#225;tica sobre el espacio dual<a class="anchor-link" href="#Hay-una-acci&#243;n-autom&#225;tica-sobre-el-espacio-dual">&#182;</a></h3>$$(&lt;\psi|\hat{A})|\phi&gt; \equiv &lt;\psi|(\hat{A}|\phi&gt;)$$$$&lt;\psi|\hat{A} \in V^{*}$$
 </div>
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Ejemplos-de-operadores">Ejemplos de operadores<a class="anchor-link" href="#Ejemplos-de-operadores">&#182;</a></h2><h3 id="Identidad">Identidad<a class="anchor-link" href="#Identidad">&#182;</a></h3>$$\hat{I}|\phi &gt; = |\phi &gt;$$<h3 id="Gradiente-(spoiler:-base-x)">Gradiente (spoiler: base x)<a class="anchor-link" href="#Gradiente-(spoiler:-base-x)">&#182;</a></h3>$$\vec{\nabla} \psi(\vec{r}) = \partial_x \psi \boldsymbol{\hat{e}_x} + \partial_y \psi \boldsymbol{\hat{e}_y} + \partial_z \psi \boldsymbol{\hat{e}_z}$$<h3 id="Posici&#243;n">Posici&#243;n<a class="anchor-link" href="#Posici&#243;n">&#182;</a></h3>$$\vec{R} \psi(\vec{r}) = ( x \boldsymbol{\hat{e}_x} + y \boldsymbol{\hat{e}_y} + z \boldsymbol{\hat{e}_z}) \psi(\vec{r})$$<h3 id="Momentum">Momentum<a class="anchor-link" href="#Momentum">&#182;</a></h3>$$\vec{P} \psi(\vec{r}) = -i\hbar \vec{\nabla} \psi$$<h3 id="Laplaciano">Laplaciano<a class="anchor-link" href="#Laplaciano">&#182;</a></h3>$$\nabla^2 \psi = (\partial_{x}^{2} + \partial_{y}^{2} + \partial_{z}^{2}) \psi$$<h3 id="Paridad">Paridad<a class="anchor-link" href="#Paridad">&#182;</a></h3>$$P \psi(\vec{r}) = \psi(-\vec{r})$$
+<h2 id="Ejemplos-de-operadores-1/2">Ejemplos de operadores 1/2<a class="anchor-link" href="#Ejemplos-de-operadores-1/2">&#182;</a></h2><h3 id="Identidad">Identidad<a class="anchor-link" href="#Identidad">&#182;</a></h3>$$\hat{I}|\phi &gt; = |\phi &gt;$$<h3 id="Dados-un-ket-y-un-bra-arbitrarios-$|\phi_1&gt;$-y-$&lt;\phi_2|$">Dados un ket y un bra arbitrarios $|\phi_1&gt;$ y $&lt;\phi_2|$<a class="anchor-link" href="#Dados-un-ket-y-un-bra-arbitrarios-$|\phi_1&gt;$-y-$&lt;\phi_2|$">&#182;</a></h3>$$\hat{A}_{\phi_1,\phi_2} |\psi&gt; = (|\phi_1&gt;&lt;\phi_2|)~ |\psi&gt; = &lt;\phi_2|\psi&gt;|\phi_1&gt;$$<h3 id="Gradiente-(base-x)">Gradiente (base x)<a class="anchor-link" href="#Gradiente-(base-x)">&#182;</a></h3>$$\vec{\nabla} \psi(\vec{r}) = \partial_x \psi \boldsymbol{\hat{e}_x} + \partial_y \psi \boldsymbol{\hat{e}_y} + \partial_z \psi \boldsymbol{\hat{e}_z}$$<h3 id="Posici&#243;n">Posici&#243;n<a class="anchor-link" href="#Posici&#243;n">&#182;</a></h3>$$\vec{R} \psi(\vec{r}) = ( x \boldsymbol{\hat{e}_x} + y \boldsymbol{\hat{e}_y} + z \boldsymbol{\hat{e}_z}) \psi(\vec{r})$$
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Ejemplos-de-operadores-2/2">Ejemplos de operadores 2/2<a class="anchor-link" href="#Ejemplos-de-operadores-2/2">&#182;</a></h2><h3 id="Momentum">Momentum<a class="anchor-link" href="#Momentum">&#182;</a></h3>$$\vec{P} \psi(\vec{r}) = -i\hbar \vec{\nabla} \psi$$<h3 id="Laplaciano">Laplaciano<a class="anchor-link" href="#Laplaciano">&#182;</a></h3>$$\nabla^2 \psi = (\partial_{x}^{2} + \partial_{y}^{2} + \partial_{z}^{2}) \psi$$<h3 id="Paridad">Paridad<a class="anchor-link" href="#Paridad">&#182;</a></h3>$$P \psi(\vec{r}) = \psi(-\vec{r})$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#193;lgebra-de-operadores">&#193;lgebra de operadores<a class="anchor-link" href="#&#193;lgebra-de-operadores">&#182;</a></h2><p>Por comodidad, restringiremos la discusión al caso de $\hat{O}:V\longrightarrow V$ ($V'=V$)</p>
+<ul>
+<li>Suma
+$$(\hat{A} + \hat{B})|\psi&gt; = \hat{A}|\psi&gt; + \hat{B}|\psi&gt;$$</li>
+<li>Producto
+$$(\hat{A}\hat{B})|\psi&gt; = \hat{A}(\hat{B}|\psi&gt;)$$<ul>
+<li>Conmutador:
+$$\hat{A}\hat{B}=\hat{B}\hat{A}+[\hat{A},\hat{B}]$$
+En general: $$[\hat{A},\hat{B}] \neq 0$$</li>
+</ul>
+</li>
+</ul>
 
-     </div>
 </div>
-</div>
-</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Asociatividad-del-producto-de-operadores">Asociatividad del producto de operadores<a class="anchor-link" href="#Asociatividad-del-producto-de-operadores">&#182;</a></h2><p>La asociatividad del producto de operadores permite que las siguientes expresiones tengan sentido</p>
+<ul>
+<li>$(\hat{A}\hat{B})\hat{C} = \hat{A}(\hat{B}\hat{C}) = \hat{A}\hat{B}\hat{C}$</li>
+<li>$(\hat{A}\hat{B})|\psi&gt; = \hat{A}(\hat{B}|\psi&gt;) = \hat{A}\hat{B}|\psi&gt;$</li>
+<li>$\hat{A}^m\hat{A}^n = \hat{A}^{m+n}$</li>
+<li>$(&lt;\psi|\hat{A})|\phi&gt; = &lt;\psi|(\hat{A}|\phi&gt;) = &lt;\psi|\hat{A}|\phi&gt;$</li>
+</ul>
 
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Valor-esperado">Valor esperado<a class="anchor-link" href="#Valor-esperado">&#182;</a></h3><ul>
+<li>Se define el valor esperado de un operador con respecto a un estado de $\mathcal{H}$. </li>
+<li>Es un escalar, construído a partir de un estado del espacio y un operador.</li>
+<li>Importante en la predicción del valor medio de una medición (ver postulados)</li>
+</ul>
+$$&lt;\hat{A}&gt; = \frac{&lt;\psi|\hat{A}|\psi&gt;}{&lt;\psi|\psi&gt;}$$
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Componentes-de-un-operador">Componentes de un operador<a class="anchor-link" href="#Componentes-de-un-operador">&#182;</a></h2><ul>
+<li><p>Todo estado se expande en función de la base
+$$|\psi&gt;=\sum_{i=1}^{N}a_i|\phi_i&gt;$$</p>
+</li>
+<li><p>Componentes $a_i$ son vectores columna (una generalización de )</p>
+</li>
+</ul>
+$$ &lt;\phi_i|\psi&gt; = \left(\begin{matrix}a_1 \\ a_2 \\ \vdots \\ \end{matrix}\right)$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Componentes-de-un-operador">Componentes de un operador<a class="anchor-link" href="#Componentes-de-un-operador">&#182;</a></h2>$$ &lt;\phi_i|\psi&gt; = \left(\begin{matrix}a_1 \\ a_2 \\ \vdots \\ \end{matrix}\right)$$<ul>
+<li>El vector se puede "rearmar" a partir de las componentes calculadas con el PE (completitud de la base)</li>
+</ul>
+$$|\psi&gt; = \sum_{i=1}^{N}a_i|\phi_i&gt; = \left(\sum_{i=1}^{N}|\phi_i&gt;a_i\right) = \left(\sum_{i=1}^{N}|\phi_i&gt;&lt;\phi_i|\psi&gt;\right) = \left(\sum_{i=1}^{N}|\phi_i&gt;&lt;\phi_i|\right)|\psi&gt;$$<ul>
+<li><strong>Las bases van y vienen. Los vectores quedan, permanecen.</strong></li>
+</ul>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\left(\sum_{i=1}^{N}|\phi_i&gt;&lt;\phi_i|\right) = |\phi_1&gt;&lt;\phi_1| + |\phi_2&gt;&lt;\phi_2| + \cdots = \hat{I}$$
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Componentes-de-un-operador">Componentes de un operador<a class="anchor-link" href="#Componentes-de-un-operador">&#182;</a></h2><ul>
+<li>Los operadores son matrices (generalización de )</li>
+</ul>
+$$|\psi'&gt; = \hat{A}|\psi&gt;$$
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$a'_j = &lt;\phi_j|\psi'&gt; = &lt;\phi_j|\hat{A}|\psi&gt;$$
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$a'_j = &lt;\phi_j|\psi'&gt; = &lt;\phi_j|\hat{A}|\left(\sum_{i=1}^{N}|\phi_i&gt;&lt;\phi_i|\right)|\psi&gt;$$$$a'_j =  \sum_{i=1}^{N}&lt;\phi_j|\hat{A}|\phi_i&gt;&lt;\phi_i|\psi&gt;$$
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$a'_j =  \sum_{i=1}^{N}A_{ji} a_i$$$$&lt;\phi_j|\hat{A}|\phi_i&gt; \equiv A_{ji}$$
+</div>
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Base--&gt;-componentes--&gt;-aterrizamos--&gt;-calculamos-cosas">Base -&gt; componentes -&gt; aterrizamos -&gt; calculamos cosas<a class="anchor-link" href="#Base--&gt;-componentes--&gt;-aterrizamos--&gt;-calculamos-cosas">&#182;</a></h2>$$ |\psi'&gt; = \hat{A}|\psi&gt; \longrightarrow a'_j =  \sum_{i=1}^{N}A_{ji} a_i \longrightarrow \left(\begin{matrix}a'_1 \\ a'_2 \\ \vdots \\ \end{matrix}\right) = \left(\begin{matrix}A_{11} &amp; A_{12} &amp; \cdots \\ A_{21} &amp; A_{22} &amp; \cdots \\ \vdots &amp; \vdots &amp; \ddots \\ \end{matrix}\right)\left(\begin{matrix}a_1 \\ a_2 \\ \vdots \\ \end{matrix}\right)$$<h3 id="Recordar">Recordar<a class="anchor-link" href="#Recordar">&#182;</a></h3>$$a_i = &lt;\phi_i|\psi&gt;$$$$A_{ij} = &lt;\phi_i|\hat{A}|\phi_j&gt;$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Operador-adjunto">Operador adjunto<a class="anchor-link" href="#Operador-adjunto">&#182;</a></h1><ul>
+<li><p>Def
+$$&lt;\psi|\hat{A}^{\dagger}|\phi&gt; = &lt;\phi|\hat{A}|\psi&gt;^{*}$$</p>
+</li>
+<li><p>Para todos los estados $|\psi&gt;$ y $|\phi&gt;$ posibles.</p>
+</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Propiedades">Propiedades<a class="anchor-link" href="#Propiedades">&#182;</a></h2>$$\left(\hat{A}^{\dagger}\right)^{\dagger}=\hat{A}.$$$$\left(a\hat{A}+b\hat{B}\right)^{\dagger} = a^{*}\hat{A}^{\dagger}+b^{*}\hat{B}^{\dagger}.$$$$\left(\hat{A}\hat{B}\right)^{\dagger} = \hat{B}^{\dagger}\hat{A}^{\dagger}.$$$$\left(\hat{A}^{n}\right)^{\dagger} = \left(\hat{A}^{\dagger}\right)^{n}.$$$$\left(|\phi_1&gt;&lt;\phi_2|\right)^{\dagger} = |\phi_2&gt;&lt;\phi_1|.$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Propiedades">Propiedades<a class="anchor-link" href="#Propiedades">&#182;</a></h2>$$\left(\hat{A}^{\dagger}\right)_{ij} = A^{*}_{ji}.$$$$|a\hat{A}\psi&gt; = a\hat{A}|\psi&gt;.$$$$&lt;a\hat{A}\psi| = a^{*}&lt;\psi|\hat{A}^{\dagger}.$$$$&lt;\hat{A}^{\dagger}\psi|\phi&gt; = &lt;\psi|\hat{A}|\phi&gt; = &lt;\psi|\hat{A}\phi&gt;.$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Operador-herm&#237;tico">Operador herm&#237;tico<a class="anchor-link" href="#Operador-herm&#237;tico">&#182;</a></h2>$$\hat{H}^{\dagger} = \hat{H}.$$$$H_{ij} = H^{*}_{ji}$$<h2 id="Operador-anti-herm&#237;tico">Operador anti-herm&#237;tico<a class="anchor-link" href="#Operador-anti-herm&#237;tico">&#182;</a></h2>$$\hat{A}^{\dagger} = -\hat{A}.$$$$A_{ij} = -A^{*}_{ji}$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Propiedades-del-conmutador">Propiedades del conmutador<a class="anchor-link" href="#Propiedades-del-conmutador">&#182;</a></h1>$$\left[\hat{A},\hat{B}\right] =  -\left[\hat{B},\hat{A}\right],$$$$\left[\hat{A},b\hat{B} + c\hat{C}\right] =  b\left[\hat{A},\hat{B}\right] + c\left[\hat{A},\hat{C}\right],$$$$\left[\hat{A},\hat{B}\right]^{\dagger} =  \left[\hat{B}^{\dagger},\hat{A}^{\dagger}\right],$$$$\left[\hat{A},\hat{B}\hat{C}\right] =  \hat{B}\left[\hat{A},\hat{C}\right] + \left[\hat{A},\hat{B}\right]\hat{C},$$<ul>
+<li>Identidad de Jacobi</li>
+</ul>
+$$\left[\hat{A},\left[\hat{B},\hat{C}\right]\right] + \left[\hat{C},\left[\hat{A},\hat{B}\right]\right] + \left[\hat{B},\left[\hat{C},\hat{A}\right]\right] = 0$$<ul>
+<li>Operadores c-number</li>
+</ul>
+$$\left[\hat{A},b\hat{I}\right] \equiv \left[\hat{A},b\right] = 0$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Propiedades-del-conmutador">Propiedades del conmutador<a class="anchor-link" href="#Propiedades-del-conmutador">&#182;</a></h1><ul>
+<li>Operadores sobre funciones</li>
+</ul>
+$$\left[\hat{X},\hat{P}_x\right] = x(-i\hbar \partial_{x}) - (-i\hbar \partial_{x})x = i\hbar = i\hbar\hat{I}$$<ul>
+<li>Para convencerse del conmutador ver la acción explícita sobre una función $\psi(x)$</li>
+</ul>
+$$\left[\hat{X},\hat{P}_x\right] \psi(x) = x(-i\hbar \partial_{x}) \psi(x) - (-i\hbar \partial_{x})x\psi(x) = i\hbar \psi(x) = i\hbar\hat{I} \psi(x)$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Potencias-(ejercicio)">Potencias (ejercicio)<a class="anchor-link" href="#Potencias-(ejercicio)">&#182;</a></h2>$$\left[\hat{A},\hat{B}^{n}\right] = \sum_{i=0}^{n-1}\hat{B}^{i}\left[\hat{A},\hat{B}\right]\hat{B}^{n-i-1}$$<ul>
+<li>$n=3$</li>
+</ul>
+$$\left[\hat{A},\hat{B}^{3}\right] = \hat{B}^{2}\left[\hat{A},\hat{B}\right] + \left[\hat{A},\hat{B}^{2}\right]\hat{B} = \hat{B}^{2}\left[\hat{A},\hat{B}\right] + \sum_{i=0}^{1}\hat{B}^{i}\left[\hat{A},\hat{B}\right]\hat{B}^{3-i-1} = \sum_{i=0}^{2}\hat{B}^{i}\left[\hat{A},\hat{B}\right]\hat{B}^{3-i-1}$$<ul>
+<li>$n=4$</li>
+</ul>
+$$\left[\hat{A},\hat{B}^{4}\right] = \hat{B}^{3}\left[\hat{A},\hat{B}\right] + \left[\hat{A},\hat{B}^{3}\right]\hat{B} = \hat{B}^{3}\left[\hat{A},\hat{B}\right] + \sum_{i=0}^{2}\hat{B}^{i}\left[\hat{A},\hat{B}\right]\hat{B}^{4-i-1} = \sum_{i=0}^{3}\hat{B}^{i}\left[\hat{A},\hat{B}\right]\hat{B}^{4-i-1}$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Anti-conmutador">Anti-conmutador<a class="anchor-link" href="#Anti-conmutador">&#182;</a></h2>$$\hat{A}\hat{B}=-\hat{B}\hat{A}+\left\{\hat{A},\hat{B}\right\}$$<ul>
+<li>c-numbers</li>
+</ul>
+$$\left\{a,b\right\} = \left\{a\hat{I},b\hat{I}\right\} = 2ab$$$$\left\{\hat{A},\hat{B}\right\} = 0 \Rightarrow \hat{A}\hat{B} = -\hat{B}\hat{A}$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Propiedades">Propiedades<a class="anchor-link" href="#Propiedades">&#182;</a></h2>$$\left\{\hat{A},\hat{B}\right\} =  \left\{\hat{B},\hat{A}\right\},$$$$\left\{\hat{A},b\hat{B} + c\hat{C}\right\} =  b\left\{\hat{A},\hat{B}\right\} + c\left\{\hat{A},\hat{C}\right\},$$$$\left\{\hat{A},\hat{B}\right\}^{\dagger} =  \left\{\hat{B}^{\dagger},\hat{A}^{\dagger}\right\} =  \left\{\hat{A}^{\dagger},\hat{B}^{\dagger}\right\},$$$$\left[\hat{A},\hat{B}\hat{C}\right] =  \left\{\hat{A},\hat{B}\right\}\hat{C} - \hat{B}\left\{\hat{A},\hat{C}\right\}.$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Valor-esperado,-dispersi&#243;n-y-relacion-de-incertidumbre">Valor esperado, dispersi&#243;n y relacion de incertidumbre<a class="anchor-link" href="#Valor-esperado,-dispersi&#243;n-y-relacion-de-incertidumbre">&#182;</a></h2><ul>
+<li><p>Ya hemos definido el valor esperado.</p>
+</li>
+<li><p>Veremos su relación con el promedio de una magnitud física observable ($A$) para un estado $|\psi&gt; = \sum_{i=1}^{N}a_i|\phi_i&gt;$ del sistema</p>
+</li>
+</ul>
+$$&lt;\psi|\psi&gt; = 1 \Rightarrow &lt;\hat{A}&gt; = &lt;\psi|\hat{A}|\psi&gt; = \sum_{ij} a_i^{*}A_{ij}a_j$$<ul>
+<li>Podemos definir la varianza de $\hat{A}$ en la forma usual</li>
+</ul>
+$$(\Delta A)^{2} = &lt;\hat{A}^2&gt; - &lt;\hat{A}&gt;^2$$<ul>
+<li>Para dos operadores $\hat{A}$ y $\hat{B}$ se puede probar la relación de incertidumbre <strong>(ejercicio)</strong></li>
+</ul>
+$$(\Delta A)(\Delta B) \geq \frac{1}{2}\left|\left&lt;\left[\hat{A},\hat{B}\right]\right&gt;\right| $$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Operadores-de-proyecci&#243;n">Operadores de proyecci&#243;n<a class="anchor-link" href="#Operadores-de-proyecci&#243;n">&#182;</a></h2><p>Cumple dos propiedades</p>
+$$\hat{P}^{\dagger} = \hat{P},$$$$\hat{P}^{2} = \hat{P}.$$<h3 id="Combinaci&#243;n-de-proyectores">Combinaci&#243;n de proyectores<a class="anchor-link" href="#Combinaci&#243;n-de-proyectores">&#182;</a></h3><ul>
+<li>Condición para que un producto de proyectores sea un proyector</li>
+</ul>
+$$[\hat{P}_1,\hat{P}_2] = 0 \Rightarrow \hat{P}_1\hat{P}_2$$<ul>
+<li>Condición para que la suma de proyectores sea un proyector</li>
+</ul>
+$$\hat{P}_1\hat{P}_2 = 0 \Leftrightarrow \hat{P}_1 + \hat{P}_2$$
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Ejemplo">Ejemplo<a class="anchor-link" href="#Ejemplo">&#182;</a></h2><ul>
+<li>Consideramos un estado normalizado</li>
+</ul>
+$$&lt;\phi|\phi&gt; = 1.$$<ul>
+<li>Definimos</li>
+</ul>
+$$\hat{P}_{|\phi&gt;} \equiv |\phi&gt;&lt;\phi|.$$<ul>
+<li>Se cumple</li>
+</ul>
+$$\hat{P}_{|\phi&gt;}^{\dagger} = (|\phi&gt;&lt;\phi|)^{\dagger} = |\phi&gt;&lt;\phi| = \hat{P}_{|\phi&gt;},$$$$\hat{P}_{|\phi&gt;}^{2} = (|\phi&gt;&lt;\phi|)^{2} = (|\phi&gt;&lt;\phi|)(|\phi&gt;&lt;\phi|) = |\phi&gt;(&lt;\phi|\phi&gt;)&lt;\phi| = \hat{P}_{|\phi&gt;}.$$<p>$\hat{P}_{|\phi&gt;}$ es el proyector sobre $|\phi&gt;$</p>
+$$\begin{eqnarray*} |\alpha&gt; &amp;=&amp; |\alpha&gt;_{\phi\parallel} + |\alpha&gt;_{\phi\perp}  = \hat{P}_{|\phi&gt;}|\alpha&gt; + (\hat{I}-\hat{P}_{|\phi&gt;})|\alpha&gt; \\  &amp;=&amp; |\phi&gt;&lt;\phi|\alpha&gt; + (|\alpha&gt; - |\phi&gt;&lt;\phi|\alpha&gt;) \end{eqnarray*}$$
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Otro-ejemplo-(ejercicio)">Otro ejemplo (ejercicio)<a class="anchor-link" href="#Otro-ejemplo-(ejercicio)">&#182;</a></h2><ul>
+<li><p>Dos estados $|\phi_1&gt;$ y $|\phi_2&gt;$ ortonormales</p>
+</li>
+<li><p>La suma  $\hat{P}_{|\phi_1&gt;} + \hat{P}_{|\phi_2&gt;}$ es un proyector</p>
+</li>
+<li><p>Proyecta sobre el subespacio generado por los estados  $|\phi_1&gt;$ y $|\phi_2&gt;$</p>
+</li>
+</ul>
+
+</div>
 </div></section></section>
 </div>
 </div>
@@ -14468,6 +14695,9 @@ require(
         Reveal.initialize({
             controls: true,
             progress: true,
+			slideNumber: "c/t",
+			showNotes: false,
+			defaultTiming: null,
             history: true,
             transition: "slide",
         });
@@ -14481,7 +14711,7 @@ require(
         Reveal.addEventListener('slidechanged', update);
 
         function setScrollingSlide() {
-            var scroll = true
+            var scroll = false
             if (scroll === true) {
               var h = $('.reveal').height() * 0.95;
               $('section.present').find('section')

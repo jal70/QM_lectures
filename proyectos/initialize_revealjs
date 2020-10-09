@@ -4,7 +4,7 @@ jupyter nbconvert NotasDeClase.ipynb --to slides --post serve --SlidesExporter.r
             controls: true,
             progress: true,
 			slideNumber: "c/t",
-			showNotes: true,
+			showNotes: false,
 			defaultTiming: null,
             history: true,
             transition: "none",
@@ -16,6 +16,8 @@ pandoc NotasDeClase.html -o prueba.epub -t epub3
 pandoc NotasDeClase.html -o prueba.epub --webtex
 pandoc NotasDeClase.html -o prueba.epub
 
+
+#https://revealjs.com/config/
 +
 Reveal.initialize({
 
