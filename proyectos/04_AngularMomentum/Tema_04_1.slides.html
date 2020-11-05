@@ -13216,7 +13216,11 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Objetivos">Objetivos<a class="anchor-link" href="#Objetivos">&#182;</a></h1><p>En esta sección estudiaremos los conceptos de</p>
 <ul>
-<li>sss</li>
+<li>Momento angular orbital</li>
+<li>Operadores de momento angular orbital y sus propiedades</li>
+<li>Teoría general del momento angular</li>
+<li>Espectro</li>
+<li>Representación matricial general</li>
 </ul>
 
 </div>
@@ -13225,7 +13229,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>xxxx</p>
+<p>Al finalizar esta sección los estudiantes deben conocer la definición de momento angular orbital, realizar operaciones de conmutación, ser capaces de construir el espectro del operador de momento angular y sus elementos de matriz.</p>
 
 </div>
 </div>
@@ -13372,7 +13376,7 @@ $$\hat{L}^2 \equiv \hat{L}^2_1 + \hat{L}^2_2 + \hat{L}^2_3$$<p><img src="figuras
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Operador-general">Operador general<a class="anchor-link" href="#Operador-general">&#182;</a></h2><ul>
+<h2 id="Operador-general-de-momento-angular">Operador general de momento angular<a class="anchor-link" href="#Operador-general-de-momento-angular">&#182;</a></h2><ul>
 <li>Un operador general de momento angular ($\hat{\vec{J}}$) debe cumplir las reglas de conmutación que hemos encontrado para $\hat{\vec{L}}$</li>
 </ul>
 $$\left[\hat{J}_i,\hat{J}_j\right] = i\hbar \sum_k \epsilon_{ijk}\hat{J}_k$$$$\left[\hat{J}^2,\hat{J}_i\right] = 0$$<ul>
@@ -13411,7 +13415,7 @@ $$\left[\hat{J}_i,\hat{J}_j\right] = i\hbar \sum_k \epsilon_{ijk}\hat{J}_k$$$$\l
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Operadores-escalera">Operadores escalera<a class="anchor-link" href="#Operadores-escalera">&#182;</a></h2><ul>
-<li>Recordando como se hizo para construir el espectro del oscilador armónico</li>
+<li>Recordamos el programa usado para construir el espectro del oscilador armónico</li>
 </ul>
 <p><img src="figuras/escalera_J.png" alt="componentes"></p>
 
@@ -13500,23 +13504,97 @@ $$\left|\alpha,\beta\right&gt;  \longrightarrow \left|j,m\right&gt; $$$$-j \leq 
 <li><p>Nos concentraremos en hallar la constante de proporcionalidad</p>
 </li>
 </ul>
-<p><img src="figuras/normalizacion.png" alt="componentes"></p>
+$$\hat{J}_{\pm} \left|j,m\right&gt; = \hbar \sqrt{j(j+1) - m(m \pm 1)} \left|j,m \pm 1\right&gt;$$<p><img src="figuras/normalizacion.png" alt="componentes"></p>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Elementos-de-matriz">Elementos de matriz<a class="anchor-link" href="#Elementos-de-matriz">&#182;</a></h2><ul>
+<li>Los autovalores $j,m$ etiquetan de forma única los elementos del espacio.</li>
+</ul>
+$$ \hat{I} = \sum_{j}\sum_{m=-j}^{+j} \left|j,m\right&gt;\left&lt;j,m\right|$$$$ \hat{\vec{J}} = \hat{I}\hat{\vec{J}}\hat{I} = \sum_{j}\sum_{m=-j}^{+j} \left|j,m\right&gt;\left&lt;j,m\right| \hat{\vec{J}} \sum_{j'}\sum_{m'=-j'}^{+j'} \left|j',m'\right&gt;\left&lt;j',m'\right| = $$$$ = \sum_{j}\sum_{m=-j}^{+j} \sum_{j'}\sum_{m'=-j'}^{+j'} \left|j,m\right&gt; J_{j,m,j',m'} \left&lt;j',m'\right|$$$$ J_{j,m,j',m'} = \left&lt;j,m\right| \hat{\vec{J}}  \left|j',m'\right&gt;$$
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Elementos-de-matriz">Elementos de matriz<a class="anchor-link" href="#Elementos-de-matriz">&#182;</a></h2><ul>
+<li>Tomemos por ejemplo el caso de fijar $j$ a un único valor</li>
+</ul>
+$$J^2_{mm'} = \hbar^2 j(j+1) \left( \matrix{ 1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 1 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; 1\\ }\right);$$<p></p>
+$${J_3}_{mm'} = \hbar \left( \matrix{ j &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; j-1 &amp; \cdots &amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\  0 &amp; 0 &amp; \cdots &amp; -j\\ }\right)$$
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Elementos-de-matriz-$J_{+}$">Elementos de matriz $J_{+}$<a class="anchor-link" href="#Elementos-de-matriz-$J_{+}$">&#182;</a></h2>$${J_{+}}_{mm'} = \hbar \left( \matrix{ 0 &amp; \sqrt{2j} &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; \sqrt{2(2j-1)} &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; \ddots &amp; 0 &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \ddots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; \sqrt{2(2j-1)} &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; \sqrt{2j} \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\}\right)$$
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Entendiendo-la-secuencia">Entendiendo la secuencia<a class="anchor-link" href="#Entendiendo-la-secuencia">&#182;</a></h2><ul>
+<li>Los elementos de matriz no nulos de $\hat{J}_{+}$</li>
+</ul>
+$$\sqrt{j(j+1)-m(m+1)}, ~~~~~m=j-1\cdots -j$$<ul>
+<li>Cambiamos a una variable $k$ positiva: $m=j-k$</li>
+</ul>
+$$\sqrt{k(2j-(k-1))}, ~~~~~k=1\cdots 2j$$<ul>
+<li>Queda:</li>
+</ul>
+$$\sqrt{2j}, ~~\sqrt{(2)(2j-1)}, ~~\sqrt{(3)(2j-2)},\dots, \sqrt{(2j-2)(2j-(2j-2-1))}, ~~ \sqrt{(2j-1)(2j-(2j-1-1))}, ~~\sqrt{(2j)(2j-(2j-1))}$$$$\longrightarrow \sqrt{2j}, ~~\sqrt{(2)(2j-1)}, ~~\sqrt{(3)(2j-2)},\dots, \sqrt{(2j-2)(3))}, ~~ \sqrt{(2j-1)(2))}, ~~\sqrt{(2j)(1)}$$
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Elementos-de-matriz-$J_{-}$">Elementos de matriz $J_{-}$<a class="anchor-link" href="#Elementos-de-matriz-$J_{-}$">&#182;</a></h2>$${J_{-}}_{mm'} = \hbar \left( \matrix{ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0\\ \sqrt{2j} &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; \sqrt{2(2j-1)} &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; 0 \\ \vdots &amp; \vdots &amp; \ddots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \ddots &amp; 0 &amp; 0 &amp; 0\\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; \sqrt{2(2j-1)} &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; \sqrt{2j} &amp; 0 \\}\right)$$
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ejemplo-$j=\frac{1}{2}$">Ejemplo $j=\frac{1}{2}$<a class="anchor-link" href="#Ejemplo-$j=\frac{1}{2}$">&#182;</a></h2>$$J^2_{mm'} = \frac{3\hbar^2}{4} \left( \matrix{ 1 &amp; 0 \\ 0  &amp; 1\\ }\right); ~~~~{J_3}_{mm'} = \frac{\hbar}{2} \left( \matrix{ 1 &amp; 0 \\  0 &amp; -1\\ }\right)$$$${J_{+}}_{mm'} = \hbar \left( \matrix{ 0 &amp; 1 \\ 0  &amp; 0\\ }\right); ~~~~{J_{-}}_{mm'} = \hbar \left( \matrix{ 0 &amp; 0 \\  1 &amp; 0\\ }\right)$$$${J_{1}}_{mm'} = \frac{1}{2}({J_{+}}_{mm'} + {J_{-}}_{mm'}) = \frac{\hbar}{2} \left( \matrix{ 0 &amp; 1 \\ 1  &amp; 0\\ }\right);$$$${J_{2}}_{mm'} = \frac{1}{2i}({J_{+}}_{mm'} - {J_{-}}_{mm'}) = \frac{\hbar}{2} \left( \matrix{ 0 &amp; -i \\ i  &amp; 0\\ }\right)$$
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ejemplo-$j=1$">Ejemplo $j=1$<a class="anchor-link" href="#Ejemplo-$j=1$">&#182;</a></h2>$$J^2_{mm'} = 2\hbar^2 \left( \matrix{ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\\ }\right); ~~~~{J_3}_{mm'} = \hbar \left( \matrix{ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; -1\\ }\right)$$$${J_{+}}_{mm'} = \hbar \left( \matrix{ 0 &amp; \sqrt{2} &amp; 0 \\ 0  &amp; 0 &amp; \sqrt{2} \\ 0  &amp; 0 &amp; 0 \\ }\right); ~~~~{J_{-}}_{mm'} = \hbar \left( \matrix{ 0 &amp; 0 &amp; 0 \\ \sqrt{2} &amp; 0 &amp; 0 \\ 0  &amp; \sqrt{2} &amp; 0 \\ }\right)$$$${J_{1}}_{mm'} = \frac{1}{2}({J_{+}}_{mm'} + {J_{-}}_{mm'}) = \frac{\sqrt{2}\hbar}{2} \left( \matrix{ 0 &amp; 1 &amp; 0 \\ 1  &amp; 0 &amp; 1 \\  0 &amp; 1 &amp; 0 \\ }\right);$$$${J_{2}}_{mm'} = \frac{1}{2i}({J_{+}}_{mm'} - {J_{-}}_{mm'}) = \frac{\sqrt{2}\hbar}{2} \left( \matrix{ 0 &amp; -i &amp; 0 \\ i  &amp; 0 &amp; -i \\  0 &amp; i &amp; 0 \\ }\right)$$
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Caso-m&#225;s-general:-$j-\in-\{j,j+1,\cdots,j+n\}$">Caso m&#225;s general: $j \in \{j,j+1,\cdots,j+n\}$<a class="anchor-link" href="#Caso-m&#225;s-general:-$j-\in-\{j,j+1,\cdots,j+n\}$">&#182;</a></h2><ul>
+<li>El espacio se descompone en la suma directa de subespacios para cada valor de $j \longrightarrow j \oplus j+1 \oplus \dots \oplus j+n$.</li>
+<li>Ejemplo $1 \oplus 2$</li>
+</ul>
+$$ J^2 = \hbar^2{\rm Diag}(2,2,2,6,6,6,6,6);$$$$ J_3 = \hbar{\rm Diag}(1,0,-1,2,1,0,-1,-2);$$
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ejemplo-$1-\oplus-2$">Ejemplo $1 \oplus 2$<a class="anchor-link" href="#Ejemplo-$1-\oplus-2$">&#182;</a></h2><ul>
+<li>Las matrices tienen una estructura de bloques</li>
+</ul>
+<p><img src="figuras/suma_directa_1mas2.png" alt="componentes"></p>
 
-    </div>
 </div>
 </div>
-
 </div></section></section>
 </div>
 </div>
@@ -13540,6 +13618,7 @@ require(
         Reveal.initialize({
             controls: true,
             progress: true,
+			slideNumber: "c/t",
             history: true,
 
             transition: "none",
