@@ -1,2 +1,2 @@
 # QM_lectures
-Clases mecánica cuántica.
+Clases Mecánica Cuántica.
